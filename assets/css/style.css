@@ -1,30 +1,357 @@
-#navbar{
-   background: rgb(139 190 0);
+/* # General */
+
+@font-face {
+  font-family: 'monserrat-medium';
+  /* Nombre que se le dará a la fuente */
+  src: url('../font-family/Montserrat-Medium.otf') format('opentype');
+  /* Ruta donde se encuentra el archivo .otf */
 }
 
-#navbar li a{
-    color: #fff
- }
-
-.navbar-toggler:hover, .nav-link:hover, .nav-link:focus {
-    color: rgb(67, 92, 0) !important;
-    transition: color 0.5s ease; 
+@font-face {
+  font-family: 'monserrat-BlackItalic';
+  /* Nombre que se le dará a la fuente */
+  src: url('../font-family/Montserrat-BlackItalic.otf') format('opentype');
+  /* Ruta donde se encuentra el archivo .otf */
 }
 
-.navbar-toggler{
-    border: none;
+
+@font-face {
+  font-family: 'montserrat-ExtraLightItalic';
+  /* Nombre que se le dará a la fuente */
+  src: url('../font-family/Montserrat-ExtraLightItalic.otf') format('opentype');
+  /* Ruta donde se encuentra el archivo .otf */
+}
+
+
+@font-face {
+  font-family: 'montserrat-Black';
+  /* Nombre que se le dará a la fuente */
+  src: url('../font-family/montserrat-Black.otf') format('opentype');
+  /* Ruta donde se encuentra el archivo .ttf */
+}
+
+
+:root {
+  --color-primary: rgb(139, 190, 0);
+  --color-secondary: rgb(0, 162, 149);
+  --color-third: rgb(67, 92, 0);
+  --color-text-light: #fff;
+  --color-text-dark: #333;
+  --color-background-light: #f5f5f5;
+  --color-background-dark: #222;
+}
+
+:root[data-bs-theme="light"] {
+  --bs-body-color: var(--color-text-light);
+  --bs-body-color-text: var(--color-text-dark);
+  --bs-body-bg: var(--color-background-light);
+  --bs-primary: var(--color-primary);
+  --bs-third: var(--color-third);
+}
+
+:root[data-bs-theme="dark"] {
+  --bs-body-color-text: var(--color-text-light);
+  --bs-body-color: var(--color-text-light);
+  --bs-body-bg: var(--color-background-dark);
+  --bs-primary: var(--color-text-dark);
+  --bs-secondary: var(--color-secondary);
+  --bs-third: var(--color-background-dark);
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: monserrat-medium, sans-serif;
+}
+
+
+/* Navbar */
+
+#navbar {
+  background: var(--bs-primary);
+  font-family: sans-serif;
+}
+
+#navbar li a {
+  color: var(--color-text-light);
+}
+
+.navbar-toggler:hover,
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--bs-third) !important;
+  transition: color 0.5s ease;
+}
+
+.navbar-toggler {
+  border: none;
 }
 
 .navbar-toggler:focus {
-    text-decoration: none !important; 
-    outline: 0 !important;
-     box-shadow: none !important;
+  text-decoration: none !important;
+  outline: 0 !important;
+  box-shadow: none !important;
 }
 
-#mobileMenu{
-    background: rgb(139 190 0);
+#mobileMenu {
+  background: var(--bs-primary);
 }
 
-#citaNow{
-    background-color: rgb(0 162 149);
+#citaNow {
+  background-color: var(--color-secondary);
+  padding: 0;
+  margin-top: 8px;
+}
+
+/* Header */
+
+#header {
+  padding: 10rem 0;
+  background-color: var(--bs-primary);
+  color: var(--bs-body-color);
+}
+
+#header #title_1 h1 {
+  font-family: "montserrat-Black";
+  text-align: center;
+}
+
+#header #title_2 h1 {
+  font-family: "montserrat-ExtraLightItalic";
+}
+
+/* Responsive Styles */
+
+/* Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #header #title_1 h1 {
+    font-size: 2.5rem;
+  }
+
+  #header #title_2 h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Medium devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #header #title_1 h1 {
+    font-size: 3rem;
+  }
+
+  #header #title_2 h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Large devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #header #title_1 h1 {
+    font-size: 4.5rem;
+  }
+
+  #header #title_2 h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Extra large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #header #title_1 h1 {
+    font-size: 6rem;
+  }
+
+  #header #title_2 h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Super large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1919.98px) {
+  #header #title_1 h1 {
+    font-size: 10rem;
+  }
+
+  #header #title_2 h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Ultra large devices (very large desktops, 1920px and up) */
+@media (min-width: 1920px) {
+  #header #title_1 h1 {
+    font-size: 12rem;
+  }
+
+  #header #title_2 h1 {
+    font-size: 4rem;
+  }
+}
+
+/* MAIN */
+
+#main {
+  background: var(--bs-body-bg);
+  margin-top: -70px;
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 575.98px) {
+  #main {
+    border-top-left-radius: 6vw;
+    border-top-right-radius: 6vw;
+  }
+}
+
+/* Ajustes para dispositivos medianos */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  #main {
+    border-top-left-radius: 4%;
+    border-top-right-radius: 4%;
+  }
+}
+
+/* Ajustes para dispositivos grandes */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #main {
+    border-top-left-radius: 6%;
+    border-top-right-radius: 6%;
+  }
+}
+
+/* Ajustes para dispositivos muy grandes */
+@media (min-width: 1200px) and (max-width: 1799.98px) {
+  #main {
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+  }
+}
+
+/* Ajustes para dispositivos ultra grandes */
+@media (min-width: 1800px) {
+  #main {
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+  }
+}
+
+
+/* Valores section */
+
+#valores h2 {
+  color: var(--bs-body-color-text);
+}
+
+#valores .text-1 {
+  font-size: 5vw;
+  font-family: "montserrat-Black";
+}
+
+/* Media query para pantallas pequeñas (por ejemplo, teléfonos) */
+@media only screen and (max-width: 600px) {
+  #valores .text-1 {
+    font-size: 7vw;
+  }
+}
+
+/* Media query para tabletas y pantallas medianas */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  #valores .text-1 {
+    font-size: 5vw;
+  }
+}
+
+/* Media query para pantallas grandes (por ejemplo, computadoras de escritorio) */
+@media only screen and (min-width: 1025px) {
+  #valores .text-1 {
+    font-size: 4vw;
+  }
+}
+
+#valores .boxValues {
+  padding: 30px;
+  height: 40vh;
+  background: #fff;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+
+}
+
+#valores .boxValues:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+#valores .boxValues h3 {
+  font-family: "montserrat-Black";
+  color: var(--bs-body-color-text);
+  text-align: center;
+}
+
+/* Media query para pantallas muy pequeñas (por ejemplo, teléfonos pequeños) */
+@media only screen and (max-width: 480px) {
+  #valores .boxValues h3 {
+    font-size: 9vw;
+  }
+}
+
+/* Media query para teléfonos y pantallas pequeñas */
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+  #valores .boxValues h3 {
+    font-size: 5vw;
+  }
+}
+
+/* Media query para tabletas y pantallas medianas */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  #valores .boxValues h3 {
+    font-size: 5vw;
+  }
+}
+
+/* Media query para pantallas medianas a grandes */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #valores .boxValues h3 {
+    font-size: 3vw;
+  }
+}
+
+/* Media query para pantallas grandes (por ejemplo, computadoras de escritorio estándar) */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  #valores .boxValues h3 {
+    font-size: 3vw;
+  }
+}
+
+/* Media query para pantallas grandes (por ejemplo, resoluciones 4K) */
+@media only screen and (min-width: 1441px) {
+  #valores .boxValues h3 {
+    font-size: 3vw;
+  }
+}
+
+.eslogan {
+  padding: 50px 0;
+}
+
+.eslogan span {
+  font-size: 4.5vw;
+  font-weight: bold;
+  line-height: 1.2;
+  background: linear-gradient(90deg, rgb(25, 91, 158), rgb(0 162 149), rgb(139 190 0));
+  background-clip: text;
+  color: transparent;
+}
+
+.eslogan .highlight_2 {
+  color: var(--bs-body-color);
+  background: linear-gradient(90deg, rgb(158 139 255), rgb(136 150 255), rgb(16 76 137));
 }
