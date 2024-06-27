@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
             },
             1200: {
                 slidesPerView: 1,
-
+                centeredSlides: true,
+                spaceBetween: 40
             }
         }
     });

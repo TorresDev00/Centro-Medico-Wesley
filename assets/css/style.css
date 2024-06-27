@@ -278,15 +278,18 @@ body {
 
 #valores .boxValues {
   padding: 30px;
-  aspect-ratio: 1 / 1; /* Relación de aspecto 1:1 para mantenerlo cuadrado */
+  width: 100%; /* Asegura que la caja ocupe todo el ancho disponible */
+  height: 0;
+  padding-bottom: 100%; /* Relación de aspecto 1:1 para mantenerlo cuadrado */
   background: var(--bs-body-bg);
   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease-in-out;
   border-radius: 3vw;
+  position: relative;
 }
 
 #valores .boxValues:hover {
-  box-shadow: 10px 8px 30px rgba(0, 0, 0, 15);
+  box-shadow: 10px 8px 30px rgba(0, 0, 0, 0.15);
   transform: translateY(-5px);
 }
 
@@ -294,49 +297,49 @@ body {
   font-family: "montserrat-Black";
   color: var(--bs-body-color-text);
   text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-
+/* Responsividad de las fuentes */
 @media only screen and (max-width: 480px) {
   #valores .boxValues h3 {
-    font-size: 9vw;
+      font-size: 9vw;
   }
 }
-
 
 @media only screen and (min-width: 481px) and (max-width: 600px) {
   #valores .boxValues h3 {
-    font-size: 5vw;
+      font-size: 5vw;
   }
 }
-
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   #valores .boxValues h3 {
-    font-size: 4.5vw;
+      font-size: 4.5vw;
   }
 }
-
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   #valores .boxValues h3 {
-    font-size: 3vw;
+      font-size: 3vw;
   }
 }
-
 
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
   #valores .boxValues h3 {
-    font-size: 3vw;
+      font-size: 3vw;
   }
 }
-
 
 @media only screen and (min-width: 1441px) {
   #valores .boxValues h3 {
-    font-size: 3vw;
+      font-size: 3vw;
   }
 }
+
 
 /* Eslogan */
 
@@ -362,25 +365,41 @@ body {
 /* Testiminios */
 
 #testimonios {
-  position: relative;
   background: var(--bs-secondary);
   border-radius: 2vw;
+  position: relative;
+  overflow: hidden; /* Asegura que los contenidos no se desborden */
 }
 
 .medico-img {
   width: 40%;
-  height: auto;
+  height: 90vh;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 10px;
+  z-index: 3; /* Asegura que la imagen esté por encima del fondo pero por debajo del texto */
 }
 
-#testimonios h3 {
+#testimonios h3 {   
   font-family: "montserrat-Black";
   font-size: 12vw;
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté por encima de la imagen */
+}
+#testimonios .info p{
+ font-size: 2vw;
+}
+#testimonios .p1 {
+  padding-left: 20vw;
+}
+#testimonios .p2 {
+  padding-left: 20vw;
+}
+#testimonios .p3 {
+  padding-left: 30vw;
 }
 
-#testimonios .test-align{
+#testimonios .test-align {
   display: grid;
   place-items: center; /* Centra tanto horizontal como verticalmente */
   height: 100%;
@@ -388,6 +407,8 @@ body {
 
 #testimonios .info {
   text-align: center;
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté por encima de la imagen */
 }
 
 #testimonios .info a {
@@ -396,6 +417,79 @@ body {
 
 #testimonios .info a i {
   font-size: 50px;
+}
+
+#testimonios .imgTest {
+  position: relative;
+  margin: 10px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: 1200px) {
+  
+  #testimonios .info p {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 1028px) {
+  
+  .medico-img {
+    width: 30%; /* Ajusta el tamaño de la imagen en pantallas más pequeñas */
+    height: 55vh;
+  }
+}
+
+
+/* Media queries para ajustes responsivos */
+@media (max-width: 768px) {
+  #testimonios h3 {
+      font-size: 8vw; /* Ajusta el tamaño de fuente en pantallas más pequeñas */
+  }
+
+  .medico-img {
+    width: 40%;
+    height: 30vh;
+  }
+
+  #testimonios .info a i {
+      font-size: 40px; /* Ajusta el tamaño del icono en pantallas más pequeñas */
+  }
+
+  #testimonios .info p {
+      font-size: 1.5rem; /* Ajusta el tamaño del texto en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  
+  #testimonios h3 {
+      font-size: 18vw; /* Ajusta el tamaño de fuente en pantallas muy pequeñas */
+      padding-left: 0 !important;
+  }
+
+  .medico-img {
+      display: none; /* Oculta la imagen en pantallas muy pequeñas */
+  }
+
+  #testimonios .info a i {
+      font-size: 30px; /* Ajusta el tamaño del icono en pantallas muy pequeñas */
+  }
+
+  #testimonios .info p {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  #testimonios .info p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
 }
 
 /* box */
@@ -407,16 +501,14 @@ body {
 #box .boxValues {
   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4vw;
-  max-width: 600px; /* Aumentar el ancho máximo para hacerla más rectangular */
   width: 100%; /* Ancho completo para dispositivos pequeños */
   padding: 2rem; /* Añadir padding para hacer la caja más alta */
-  background-color: white; /* Fondo blanco */
-  border: 1px solid #dee2e6; /* Borde del rectángulo */
+  background-color: var(--color-text-light); /* Fondo blanco */
 }
 
 #box .boxValues h3 {
   font-family: "monserrat-BlackItalic";
-  color: var(--bs-body-color-text);
+  color: var(--color-text-dark);
   font-size: 2vw;
 }
 
@@ -426,22 +518,71 @@ body {
 }
 
 #box .boxValues .highlight {
-  border-bottom: 4px solid  var(--bs-primary); /* Línea verde debajo del texto */
+  border-bottom: 4px solid var(--bs-primary); /* Línea verde debajo del texto */
   display: inline-block; /* Necesario para que la línea se aplique solo al texto */
+}
+
+/* Responsividad */
+@media only screen and (max-width: 480px) {
+  #box .boxValues h3 {
+      font-size: 6vw;
+  }
+  
+  #box .boxValues .icon {
+      font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #box .boxValues h3 {
+      font-size: 4.5vw;
+  }
+  
+  #box .boxValues .icon {
+      font-size: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #box .boxValues h3 {
+      font-size: 3vw;
+  }
+  
+  #box .boxValues .icon {
+      font-size: 3.75rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  #box .boxValues h3 {
+      font-size: 2.5vw;
+  }
+  
+  #box .boxValues .icon {
+      font-size: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  #box .boxValues h3 {
+      font-size: 2vw;
+  }
+  
+  #box .boxValues .icon {
+      font-size: 4rem;
+  }
 }
 
 /* servicios */
 
 .servicios .icon-box-full {
-  padding: 2vw;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
   transition: all 0.3s ease-in-out;
-  border-radius: 5px;
+  border-radius: 4vw;
   z-index: 1;
   height: 60vh; /* Establece la altura del div al 80% del alto de la pantalla */
-  width: 90vw; /* Establece el ancho del div al 110% del ancho de la pantalla */
+  width: 100%; /* Establece el ancho del div al 110% del ancho de la pantalla */
   text-align: justify;
 }
 
@@ -475,16 +616,53 @@ body {
   transition: all 0.7s ease-in-out;
 }
 
+
+.pagination{
+  width: 100%;
+ display: flex !important;
+ align-items: center !important;
+ justify-content: center !important;
+}
+
 /* Estilos para la paginación */
 .swiper-pagination {
-  width: 20% !important;
-  margin-left: 35vw;
+  position: relative !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
   background: var(--bs-body-color-text); /* Color de fondo del contenedor de paginación */
   border-radius: 50px;
+}
+
+@media only screen and (max-width: 480px) {
+  .swiper-pagination {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .swiper-pagination {
+    width: 40% !important;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .swiper-pagination {
+    width: 30% !important;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .swiper-pagination {
+    width: 20% !important;
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  .swiper-pagination {
+    width: 20% !important;
+  }
 }
 
 .swiper-pagination-bullet {
