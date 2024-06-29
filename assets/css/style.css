@@ -340,6 +340,101 @@ body {
   }
 }
 
+/* @media de icono animado */
+/* Tamaño para pantallas muy pequeñas */
+@media (min-width: 280px) {
+  .icono_1{
+    width: 200px !important; 
+    height: 200px !important;
+  }
+  
+  .icono_2{
+    width: 210px !important; 
+    height: 210px !important;
+  }
+  
+  .icono_3{
+    width: 380px !important; 
+    height: 380px !important;
+  }
+}
+
+/* Tamaño para pantallas pequeñas */
+@media (min-width: 320px){
+
+  .icono_1{
+    width: 220px !important; 
+    height: 220px !important;
+  }
+  
+  .icono_2{
+    width: 230px !important; 
+    height: 230px !important;
+  }
+  
+  .icono_3{
+    width: 400px !important; 
+    height: 400px !important;
+  }
+
+}
+
+
+/* Tamaño para pantallas medianas */
+@media (min-width: 768px) {
+  .icono_1{
+    width: 320px !important; 
+    height: 320px !important;
+  }
+  
+  .icono_2{
+    width: 320px !important; 
+    height: 320px !important;
+  }
+  
+  .icono_3{
+    width: 550px !important; 
+    height: 550px !important;
+  }
+}
+
+/* Tamaño para pantallas grandes */
+@media (min-width: 992px) {
+  .icono_1{
+    width: 230px !important; 
+    height: 230px !important;
+  }
+  
+  .icono_2{
+    width: 230px !important; 
+    height: 230px !important;
+  }
+  
+  .icono_3{
+    width: 400px !important; 
+    height: 400px !important;
+  }
+  
+}
+
+/* Tamaño para pantallas extra grandes */
+@media (min-width: 1200px) {
+  .icono_1{
+    width: 280px !important; 
+    height: 280px !important;
+  }
+  
+  .icono_2{
+    width: 300px !important; 
+    height: 300px !important;
+  }
+  
+  .icono_3{
+    width: 520px !important; 
+    height: 520px !important;
+  }
+}
+
 
 /* Eslogan */
 
