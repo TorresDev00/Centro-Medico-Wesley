@@ -9,25 +9,19 @@
 
 @font-face {
   font-family: 'monserrat-BlackItalic';
-  /* Nombre que se le dará a la fuente */
   src: url('../font-family/Montserrat-BlackItalic.otf') format('opentype');
-  /* Ruta donde se encuentra el archivo .otf */
 }
 
 
 @font-face {
   font-family: 'montserrat-ExtraLightItalic';
-  /* Nombre que se le dará a la fuente */
   src: url('../font-family/Montserrat-ExtraLightItalic.otf') format('opentype');
-  /* Ruta donde se encuentra el archivo .otf */
 }
 
 
 @font-face {
   font-family: 'montserrat-Black';
-  /* Nombre que se le dará a la fuente */
   src: url('../font-family/montserrat-Black.otf') format('opentype');
-  /* Ruta donde se encuentra el archivo .ttf */
 }
 
 
@@ -39,15 +33,17 @@
   --color-text-dark: #333;
   --color-background-light: #f5f5f5;
   --color-background-dark: #222;
+  --color-black: #000;
 }
 
 :root[data-bs-theme="light"] {
-  --bs-body-color: var(--color-text-light);
   --bs-body-color-text: var(--color-text-dark);
+  --bs-body-color: var(--color-text-light);
   --bs-body-bg: var(--color-background-light);
   --bs-primary: var(--color-primary);
   --bs-secondary: var(--color-secondary);
   --bs-third: var(--color-third);
+  --bs-color-section: var(--color-secondary);
 }
 
 :root[data-bs-theme="dark"] {
@@ -57,6 +53,7 @@
   --bs-primary: var(--color-text-dark);
   --bs-secondary: var(--color-secondary);
   --bs-third: var(--color-background-dark);
+  --bs-color-section: var(--color-black);
 }
 
 body,
@@ -106,10 +103,50 @@ body {
   background: var(--bs-primary);
 }
 
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+  --bs-dropdown-min-width: 12rem;
+  --bs-dropdown-padding-x: .25rem;
+  --bs-dropdown-padding-y: .25rem;
+  --bs-dropdown-link-hover-bg: rgba(var(--color-text-dark), .1);
+  --bs-dropdown-link-active-bg: rgba(var(--color-text-dark), 1);
+  --bs-dropdown-font-size: .875rem;
+  font-size: .875rem;
+  border-radius: .5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /* Agrega sombra suave al menú */
+  background-color: var(--bs-color-section);
+  /* Color de fondo del menú */
+}
+
+#bd-theme-text{
+color: var(--color-text-light);
+}
+
+.dropdown-menu-end[data-bs-popper] {
+  right: 75px;
+  left: auto;
+  top: 75px;
+}
+
+.dropdown-item:hover{
+  color: var(--bs-body-color-text);
+}
+
+/* Cambiar color del icono del tema */
+.theme-icon-active {
+  color: var(--color-text-light);
+  /* Color amarillo como ejemplo, cámbialo según tu preferencia */
+}
+
 #citaNow {
   background-color: var(--color-secondary);
-  padding: 0;
+  padding: 1px;
   margin-top: 8px;
+}
+
+#citaNow:hover {
+  background-color: var(--color-background-light);
 }
 
 /* Header */
@@ -121,7 +158,7 @@ body {
 }
 
 #header #title_1 h1 {
-  padding-bottom: 10px ;
+  padding-bottom: 10px;
   font-family: "montserrat-Black";
   text-align: center;
 }
@@ -132,7 +169,7 @@ body {
 
 /* Responsive Styles */
 
-/* Small devices (portrait phones, less than 576px) */
+
 @media (max-width: 575.98px) {
   #header #title_1 h1 {
     font-size: 2.3rem;
@@ -143,7 +180,7 @@ body {
   }
 }
 
-/* Medium devices (landscape phones, 576px and up) */
+
 @media (min-width: 576px) and (max-width: 767.98px) {
   #header #title_1 h1 {
     font-size: 3rem;
@@ -154,7 +191,7 @@ body {
   }
 }
 
-/* Large devices (tablets, 768px and up) */
+
 @media (min-width: 768px) and (max-width: 991.98px) {
   #header #title_1 h1 {
     font-size: 4.5rem;
@@ -165,7 +202,7 @@ body {
   }
 }
 
-/* Extra large devices (desktops, 992px and up) */
+
 @media (min-width: 992px) and (max-width: 1199.98px) {
   #header #title_1 h1 {
     font-size: 6rem;
@@ -176,7 +213,7 @@ body {
   }
 }
 
-/* Super large devices (large desktops, 1200px and up) */
+
 @media (min-width: 1200px) and (max-width: 1919.98px) {
   #header #title_1 h1 {
     font-size: 10rem;
@@ -187,7 +224,6 @@ body {
   }
 }
 
-/* Ultra large devices (very large desktops, 1920px and up) */
 @media (min-width: 1920px) {
   #header #title_1 h1 {
     font-size: 12rem;
@@ -202,7 +238,6 @@ body {
 
 #main {
   background: var(--bs-body-bg);
-  margin-top: -70px;
 }
 
 @media (max-width: 575.98px) {
@@ -219,7 +254,6 @@ body {
   }
 }
 
-
 @media (min-width: 992px) and (max-width: 1199.98px) {
   #main {
     border-top-left-radius: 5% 0.8%;
@@ -227,14 +261,12 @@ body {
   }
 }
 
-
 @media (min-width: 1200px) and (max-width: 1799.98px) {
   #main {
     border-top-left-radius: 5% 1%;
     border-top-right-radius: 5% 1%;
   }
 }
-
 
 @media (min-width: 1800px) {
   #main {
@@ -245,6 +277,10 @@ body {
 
 
 /* Valores section */
+
+#valores {
+  margin-top: -70px;
+}
 
 #valores h2 {
   color: var(--bs-body-color-text);
@@ -280,7 +316,7 @@ body {
   padding: 30px;
   width: 100%;
   height: 50vh;
-  padding-bottom: 100%; /* Relación de aspecto 1:1 para mantenerlo cuadrado */
+  padding-bottom: 100%;
   background: var(--bs-body-bg);
   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease-in-out;
@@ -300,80 +336,81 @@ body {
   font-family: "montserrat-Black";
   color: var(--bs-body-color-text);
   text-align: center;
-  margin-top: 20px; /* Ajusta el espaciado entre el icono y el texto */
+  margin-top: 20px;
+  /* Ajusta el espaciado entre el icono y el texto */
 }
 
 /* Responsividad de las fuentes */
 @media only screen and (max-width: 480px) {
   #valores .boxValues h3 {
-      font-size: 9vw;
+    font-size: 9vw;
   }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 600px) {
   #valores .boxValues h3 {
-      font-size: 5vw;
+    font-size: 5vw;
   }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   #valores .boxValues h3 {
-      font-size: 4.5vw;
+    font-size: 4.5vw;
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   #valores .boxValues h3 {
-      font-size: 3vw;
+    font-size: 3vw;
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
   #valores .boxValues h3 {
-      font-size: 3vw;
+    font-size: 3vw;
   }
 }
 
 @media only screen and (min-width: 1441px) {
   #valores .boxValues h3 {
-      font-size: 3vw;
+    font-size: 3vw;
   }
 }
 
 /* @media de icono animado */
 /* Tamaño para pantallas muy pequeñas */
 @media (min-width: 280px) {
-  .icono_1{
-    width: 200px !important; 
+  .icono_1 {
+    width: 200px !important;
     height: 200px !important;
   }
-  
-  .icono_2{
-    width: 210px !important; 
+
+  .icono_2 {
+    width: 210px !important;
     height: 210px !important;
   }
-  
-  .icono_3{
-    width: 380px !important; 
+
+  .icono_3 {
+    width: 380px !important;
     height: 380px !important;
   }
 }
 
 /* Tamaño para pantallas pequeñas */
-@media (min-width: 320px){
+@media (min-width: 320px) {
 
-  .icono_1{
-    width: 220px !important; 
+  .icono_1 {
+    width: 220px !important;
     height: 220px !important;
   }
-  
-  .icono_2{
-    width: 230px !important; 
+
+  .icono_2 {
+    width: 230px !important;
     height: 230px !important;
   }
-  
-  .icono_3{
-    width: 400px !important; 
+
+  .icono_3 {
+    width: 400px !important;
     height: 400px !important;
   }
 
@@ -382,55 +419,55 @@ body {
 
 /* Tamaño para pantallas medianas */
 @media (min-width: 768px) {
-  .icono_1{
-    width: 320px !important; 
+  .icono_1 {
+    width: 320px !important;
     height: 320px !important;
   }
-  
-  .icono_2{
-    width: 320px !important; 
+
+  .icono_2 {
+    width: 320px !important;
     height: 320px !important;
   }
-  
-  .icono_3{
-    width: 550px !important; 
+
+  .icono_3 {
+    width: 550px !important;
     height: 550px !important;
   }
 }
 
 /* Tamaño para pantallas grandes */
 @media (min-width: 992px) {
-  .icono_1{
-    width: 230px !important; 
+  .icono_1 {
+    width: 230px !important;
     height: 230px !important;
   }
-  
-  .icono_2{
-    width: 230px !important; 
+
+  .icono_2 {
+    width: 230px !important;
     height: 230px !important;
   }
-  
-  .icono_3{
-    width: 400px !important; 
+
+  .icono_3 {
+    width: 400px !important;
     height: 400px !important;
   }
-  
+
 }
 
 /* Tamaño para pantallas extra grandes */
 @media (min-width: 1200px) {
-  .icono_1{
-    width: 280px !important; 
+  .icono_1 {
+    width: 280px !important;
     height: 280px !important;
   }
-  
-  .icono_2{
-    width: 300px !important; 
+
+  .icono_2 {
+    width: 300px !important;
     height: 300px !important;
   }
-  
-  .icono_3{
-    width: 520px !important; 
+
+  .icono_3 {
+    width: 520px !important;
     height: 520px !important;
   }
 }
@@ -463,7 +500,7 @@ body {
   background: var(--bs-secondary);
   border-radius: 2vw;
   position: relative;
-  overflow: hidden; /* Asegura que los contenidos no se desborden */
+  overflow: hidden;
 }
 
 .medico-img {
@@ -472,38 +509,42 @@ body {
   position: absolute;
   left: 0;
   top: 10px;
-  z-index: 3; /* Asegura que la imagen esté por encima del fondo pero por debajo del texto */
+  z-index: 3;
 }
 
-#testimonios h3 {   
+#testimonios h3 {
   font-family: "montserrat-Black";
   font-size: 12vw;
   position: relative;
-  z-index: 2; /* Asegura que el texto esté por encima de la imagen */
+  z-index: 2;
 }
-#testimonios .info p{
- font-size: 2vw;
+
+#testimonios .info p {
+  font-size: 2vw;
 }
+
 #testimonios .p1 {
   padding-left: 20vw;
 }
+
 #testimonios .p2 {
   padding-left: 20vw;
 }
+
 #testimonios .p3 {
   padding-left: 30vw;
 }
 
 #testimonios .test-align {
   display: grid;
-  place-items: center; /* Centra tanto horizontal como verticalmente */
+  place-items: center;
   height: 100%;
 }
 
 #testimonios .info {
   text-align: center;
   position: relative;
-  z-index: 2; /* Asegura que el texto esté por encima de la imagen */
+  z-index: 2;
 }
 
 #testimonios .info a {
@@ -524,16 +565,16 @@ body {
 }
 
 @media (max-width: 1200px) {
-  
+
   #testimonios .info p {
     font-size: 2vw;
   }
 }
 
 @media (max-width: 1028px) {
-  
+
   .medico-img {
-    width: 30%; /* Ajusta el tamaño de la imagen en pantallas más pequeñas */
+    width: 30%;
     height: 55vh;
   }
 }
@@ -542,7 +583,7 @@ body {
 /* Media queries para ajustes responsivos */
 @media (max-width: 768px) {
   #testimonios h3 {
-      font-size: 8vw; /* Ajusta el tamaño de fuente en pantallas más pequeñas */
+    font-size: 8vw;
   }
 
   .medico-img {
@@ -551,27 +592,27 @@ body {
   }
 
   #testimonios .info a i {
-      font-size: 40px; /* Ajusta el tamaño del icono en pantallas más pequeñas */
+    font-size: 40px;
   }
 
   #testimonios .info p {
-      font-size: 1.5rem; /* Ajusta el tamaño del texto en pantallas más pequeñas */
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 576px) {
-  
+
   #testimonios h3 {
-      font-size: 18vw; /* Ajusta el tamaño de fuente en pantallas muy pequeñas */
-      padding-left: 0 !important;
+    font-size: 18vw;
+    padding-left: 0 !important;
   }
 
   .medico-img {
-      display: none; /* Oculta la imagen en pantallas muy pequeñas */
+    display: none;
   }
 
   #testimonios .info a i {
-      font-size: 30px; /* Ajusta el tamaño del icono en pantallas muy pequeñas */
+    font-size: 30px;
   }
 
   #testimonios .info p {
@@ -596,9 +637,9 @@ body {
 #box .boxValues {
   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4vw;
-  width: 100%; /* Ancho completo para dispositivos pequeños */
-  padding: 2rem; /* Añadir padding para hacer la caja más alta */
-  background-color: var(--color-text-light); /* Fondo blanco */
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--color-text-light);
 }
 
 #box .boxValues h3 {
@@ -608,63 +649,63 @@ body {
 }
 
 #box .boxValues .icon {
-  color: var(--bs-primary); /* Color del icono */
-  font-size: 4rem; /* Tamaño del icono */
+  color: var(--bs-primary);
+  font-size: 4rem;
 }
 
 #box .boxValues .highlight {
-  border-bottom: 4px solid var(--bs-primary); /* Línea verde debajo del texto */
-  display: inline-block; /* Necesario para que la línea se aplique solo al texto */
+  border-bottom: 4px solid var(--bs-primary);
+  display: inline-block;
 }
 
 /* Responsividad */
 @media only screen and (max-width: 480px) {
   #box .boxValues h3 {
-      font-size: 6vw;
+    font-size: 6vw;
   }
-  
+
   #box .boxValues .icon {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   #box .boxValues h3 {
-      font-size: 4.5vw;
+    font-size: 4.5vw;
   }
-  
+
   #box .boxValues .icon {
-      font-size: 3.5rem;
+    font-size: 3.5rem;
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   #box .boxValues h3 {
-      font-size: 3vw;
+    font-size: 3vw;
   }
-  
+
   #box .boxValues .icon {
-      font-size: 3.75rem;
+    font-size: 3.75rem;
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
   #box .boxValues h3 {
-      font-size: 2.5vw;
+    font-size: 2.5vw;
   }
-  
+
   #box .boxValues .icon {
-      font-size: 4rem;
+    font-size: 4rem;
   }
 }
 
 @media only screen and (min-width: 1441px) {
   #box .boxValues h3 {
-      font-size: 2vw;
+    font-size: 2vw;
   }
-  
+
   #box .boxValues .icon {
-      font-size: 4rem;
+    font-size: 4rem;
   }
 }
 
@@ -676,8 +717,8 @@ body {
   transition: all 0.3s ease-in-out;
   border-radius: 4vw;
   z-index: 1;
-  height: 60vh; /* Establece la altura del div al 80% del alto de la pantalla */
-  width: 100%; /* Establece el ancho del div al 110% del ancho de la pantalla */
+  height: 60vh;
+  width: 100%;
   text-align: justify;
 }
 
@@ -712,11 +753,11 @@ body {
 }
 
 
-.pagination{
+.pagination {
   width: 100%;
- display: flex !important;
- align-items: center !important;
- justify-content: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 /* Estilos para la paginación */
@@ -726,7 +767,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background: var(--bs-body-color-text); /* Color de fondo del contenedor de paginación */
+  background: var(--bs-body-color-text);
   border-radius: 50px;
 }
 
@@ -763,29 +804,29 @@ body {
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background: var(--bs-body-bg); /* Color de fondo de los puntos */
+  background: var(--bs-body-bg);
   opacity: 0.5;
   border-radius: 50%;
-  margin: 0 5px; /* Espacio entre los puntos */
+  margin: 0 5px;
   transition: opacity 0.3s;
 }
 
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background:  var(--bs-body-bg); /* Color de fondo del punto activo */
+  background: var(--bs-body-bg);
 }
 
 /* Footer */
 
-#footer{
+#footer {
   background: var(--color-secondary);
   color: var(--color-background-light);
 }
 
-#footer .logos-footer a i{
+#footer .logos-footer a i {
   color: var(--color-background-light);
 }
 
-#footer .link-footer li a{
+#footer .link-footer li a {
   color: var(--color-background-light);
 }
