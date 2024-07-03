@@ -1,0 +1,257 @@
+/* Navbar */
+
+#navbar {
+  background: var(--bs-color-section);
+}
+
+#mobileMenu {
+  background: var(--bs-color-section);
+}
+
+
+.navbar-toggler:hover,
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--color-third) !important;
+}
+
+#citaNow {
+  background-color: var(--color-primary);
+}
+
+#citaNow:hover {
+  background-color: var(--color-background-light);
+}
+
+/* MAIN */
+
+main {
+  background: var(--color-background-light);
+}
+
+/* section nosotros */
+
+/* Estilos generales */
+/* Estilos generales para .nosotros */
+.nosotros {
+  height: 105vh;
+  background: var(--bs-color-section);
+  border-bottom-left-radius: 50vw 20%;
+  border-bottom-right-radius: 50vw 20%;
+  padding-bottom: 120px;
+  padding-top: 30px;
+}
+
+/* Media Queries */
+
+/* Pantallas pequeñas (teléfonos) */
+@media (max-width: 425px) {
+  .nosotros {
+    height: 100vh;
+    border-bottom-left-radius: 40vw 15%;
+    border-bottom-right-radius: 40vw 15%;
+    padding-bottom: 100px;
+    padding-top: 20px;
+  }
+}
+
+/* Pantallas medianas (tablets) */
+@media (min-width: 426px) and (max-width: 768px) {
+  .nosotros {
+    height: 100vh;
+    border-bottom-left-radius: 50vw 25%;
+    border-bottom-right-radius: 50vw 25%;
+    padding-bottom: 110px;
+    padding-top: 25px;
+  }
+}
+
+/* Pantallas grandes (PCs) */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .nosotros {
+    height: 105vh;
+    border-bottom-left-radius: 50vw 20%;
+    border-bottom-right-radius: 50vw 20%;
+    padding-bottom: 120px;
+    padding-top: 30px;
+  }
+}
+
+/* Pantallas 4K */
+@media (min-width: 2560px) {
+  .nosotros {
+    height: 100vh;
+    border-bottom-left-radius: 50vw 15%;
+    border-bottom-right-radius: 50vw 15%;
+    padding-bottom: 130px;
+    padding-top: 35px;
+  }
+}
+
+
+.vision,
+.mision {
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
+.vision h1,
+.mision h1 {
+  margin: 20px 0;
+}
+
+.vision p,
+.mision p {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Principios */
+.principios {
+  color: var(--bs-body-bg);
+}
+
+.principios .section-cell {
+  margin-top: -250px;
+}
+
+/* Pantallas pequeñas (teléfonos) */
+@media (max-width: 425px) {
+  .principios .section-cell {
+    margin-top: -135px;
+  }
+}
+
+/* Pantallas medianas (tablets) */
+@media (min-width: 426px) and (max-width: 768px) {
+  .principios .section-cell {
+    margin-top: -200px;
+  }
+}
+
+/* Pantallas grandes (PCs) */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .principios .section-cell {
+    margin-top: -250px;
+  }
+}
+
+/* Pantallas muy grandes (1200px y en adelante) */
+@media (min-width: 1200px) {
+  .principios .section-cell {
+    margin-top: -250px;
+  }
+}
+
+/* Pantallas 4K */
+@media (min-width: 2560px) {
+  .principios .section-cell {
+    margin-top: -550px;
+  }
+}
+
+/* Teléfono */
+.principios .telefono {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .principios .telefono {
+    height: 40%;
+  }
+}
+
+@media (max-width: 425px) {
+  .principios .telefono {
+    height: 20%;
+  }
+}
+
+.principios .telefono video:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%; /* Limit the maximum width to prevent overflow */
+  max-height: 90vh; /* Limit the maximum height to prevent overflow */
+  width: 75%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 4vw;
+}
+
+@media (max-width: 768px) {
+  .principios .telefono video:nth-child(2){
+    width: 75%;
+  }
+}
+
+@media (max-width: 425px) {
+  .principios .telefono video:nth-child(2){
+    width: 75%;
+  }
+}
+
+.principios .telefono img:first-child {
+  width: 80%;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 280px) {
+  .nosotros {
+    height: 110vh;
+  }
+
+}
+
+
+@media (min-width: 425px) {
+  .nosotros {
+    height: 100vh
+  }
+
+}
+
+
+@media (min-width: 786px) {
+  .nosotros {
+    height: 90vh;
+  }
+
+}
+
+/* Estilos para pantallas más grandes */
+@media (min-width: 1200px) {
+  .nosotros {
+    height: 100vh;
+  }
+
+  .vision p,
+  .mision p {
+    padding: 0 60px;
+  }
+
+  .principios .telefono video:nth-child(2) {
+    width: 75%;
+  }
+}
+
+@media (min-width: 2560px) {
+  .nosotros {
+    height: 100vh;
+  }
+
+  .vision p,
+  .mision p {
+    padding: 0 80px;
+  }
+
+  .principios .telefono video:nth-child(2) {
+    width: 75%;
+  }
+}
