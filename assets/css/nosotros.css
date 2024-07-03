@@ -34,7 +34,7 @@ main {
 /* Estilos generales */
 /* Estilos generales para .nosotros */
 .nosotros {
-  height: 105vh;
+  height: 100vh;
   background: var(--bs-color-section);
   border-bottom-left-radius: 50vw 20%;
   border-bottom-right-radius: 50vw 20%;
@@ -98,12 +98,62 @@ main {
 .vision h1,
 .mision h1 {
   margin: 20px 0;
+  font-size: 6vw; /* Tamaño de fuente base para dispositivos móviles */
 }
 
 .vision p,
 .mision p {
   text-align: center;
   margin: 20px 0;
+  font-size: 4vw; /* Tamaño de fuente base para dispositivos móviles */
+}
+
+/* Ajustes para pantallas pequeñas (teléfonos) */
+@media only screen and (max-width: 480px) {
+  .vision h1,
+  .mision h1 {
+    font-size: 6vw;
+  }
+  .vision p,
+  .mision p {
+    font-size: 4.5vw;
+  }
+}
+
+/* Ajustes para pantallas medianas (tablets) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .vision h1,
+  .mision h1 {
+    font-size: 5vw;
+  }
+  .vision p,
+  .mision p {
+    font-size: 3.5vw;
+  }
+}
+
+/* Ajustes para pantallas grandes (laptops y monitores) */
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+  .vision h1,
+  .mision h1 {
+    font-size: 3vw;
+  }
+  .vision p,
+  .mision p {
+    font-size: 1.5vw;
+  }
+}
+
+/* Ajustes para pantallas muy grandes (4K) */
+@media only screen and (min-width: 1441px) {
+  .vision h1,
+  .mision h1 {
+    font-size: 2.2vw;
+  }
+  .vision p,
+  .mision p {
+    font-size: 1.4vw;
+  }
 }
 
 /* Principios */
@@ -139,7 +189,7 @@ main {
 /* Pantallas muy grandes (1200px y en adelante) */
 @media (min-width: 1200px) {
   .principios .section-cell {
-    margin-top: -250px;
+    margin-top: -350px;
   }
 }
 
