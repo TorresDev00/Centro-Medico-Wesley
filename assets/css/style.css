@@ -123,11 +123,75 @@ body {
 color: var(--color-text-light);
 }
 
-.dropdown-menu-end[data-bs-popper] {
-  right: 75px;
-  left: auto;
-  top: 75px;
+@media (max-width: 767px) {
+  .dropdown-menu-end {
+      width: 50%; /* Asegura que el menú desplegable ocupe todo el ancho disponible */
+  }
 }
+
+/* Ajuste para pantallas medianas grandes */
+@media (min-width: 900px) {
+  .dropdown-menu-end[data-bs-popper] {
+    right: 3.8rem; 
+    top: 3.8rem;
+  }
+}
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 1100px) {
+  .dropdown-menu-end[data-bs-popper] {
+    right: 3.75rem; 
+    top: 3.75rem;
+  }
+}
+
+/* Ajuste para pantallas más grandes */
+@media (min-width: 1300px) {
+  .dropdown-menu-end[data-bs-popper] {
+    right: 5.375rem; 
+    top: 4.375rem;
+  }
+}
+
+/* Ajuste para pantallas extra grandes */
+@media (min-width: 1500px) {
+  .dropdown-menu-end[data-bs-popper] {
+    right: 12.625rem; 
+    top: 4.6875rem; 
+  }
+}
+
+/* Ajuste para pantallas ultra grandes */
+@media (min-width: 1700px) {
+  .dropdown-menu-end[data-bs-popper] {
+    right: 18.5rem; 
+    top: 5rem; 
+  }
+}
+
+/* Ajuste para pantallas ultra extra grandes */
+@media (min-width: 1900px) {
+  .dropdown-menu-end[data-bs-popper] {
+    right: 21rem; 
+    top: 5.3125rem; 
+  }
+}
+
+/* Ajuste para pantallas gigantescas */
+@media (min-width: 2100px) {
+  .dropdown-menu-end[data-bs-popper] {
+    right: 26rem; 
+    top: 5.625rem; 
+  }
+}
+
+@media (min-width: 2400px) {
+  .dropdown-menu-end[data-bs-popper] {
+    right: 31rem; 
+    top: 5.625rem; 
+  }
+}
+
 
 .dropdown-item:hover{
   color: var(--bs-body-color-text);

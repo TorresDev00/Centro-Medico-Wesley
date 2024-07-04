@@ -117,6 +117,93 @@ main {
   .vision p,
   .mision p {
     font-size: 4.5vw;
+    text-align: justify;
+  }
+}
+
+/* Ajustes para pantallas pequeñas (smartphones) */
+@media only screen and (max-width: 480px) {
+  .vision h1,
+  .mision h1 {
+    font-size: 6vw;
+  }
+  .vision p,
+  .mision p {
+    font-size: 4vw;
+  }
+}
+
+/* Ajustes para pantallas medianas (tablets) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .vision h1,
+  .mision h1 {
+    font-size: 4.5vw;
+  }
+  .vision p,
+  .mision p {
+    font-size: 3vw;
+  }
+}
+
+/* Ajustes para pantallas grandes (laptops y monitores pequeños) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .vision h1,
+  .mision h1 {
+    font-size: 5vw;
+  }
+  .vision p,
+  .mision p {
+    font-size: 3vw;
+    text-align: justify;
+  }
+}
+
+/* Ajustes para pantallas grandes (laptops y monitores medianos) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .vision h1,
+  .mision h1 {
+    font-size: 5vw;
+  }
+  .vision p,
+  .mision p {
+    font-size: 3.5vw;
+    text-align: justify;
+  }
+}
+
+/* Ajustes para pantallas grandes (laptops y monitores grandes) */
+@media only screen and (min-width: 1201px) and (max-width: 1600px) {
+  .vision h1,
+  .mision h1 {
+    font-size: 3.5vw;
+  }
+  .vision p,
+  .mision p {
+    font-size: 2.8vw;
+    text-align: justify;
+  }
+}
+
+@media only screen and (min-width: 1601px) {
+  .vision h1,
+  .mision h1 {
+    font-size: 2vw;
+  }
+  .vision p,
+  .mision p {
+    font-size: 1.5vw;
+  }
+}
+
+/* Ajustes para pantallas muy grandes (4K) */
+@media only screen and (min-width: 2000px) {
+  .vision h1,
+  .mision h1 {
+    font-size: 2vw;
+  }
+  .vision p,
+  .mision p {
+    font-size: 1.5vw;
   }
 }
 
@@ -132,29 +219,7 @@ main {
   }
 }
 
-/* Ajustes para pantallas grandes (laptops y monitores) */
-@media only screen and (min-width: 769px) and (max-width: 1440px) {
-  .vision h1,
-  .mision h1 {
-    font-size: 3vw;
-  }
-  .vision p,
-  .mision p {
-    font-size: 1.5vw;
-  }
-}
 
-/* Ajustes para pantallas muy grandes (4K) */
-@media only screen and (min-width: 1441px) {
-  .vision h1,
-  .mision h1 {
-    font-size: 2.2vw;
-  }
-  .vision p,
-  .mision p {
-    font-size: 1.4vw;
-  }
-}
 
 /* Principios */
 .principios {
@@ -175,7 +240,7 @@ main {
 /* Pantallas medianas (tablets) */
 @media (min-width: 426px) and (max-width: 768px) {
   .principios .section-cell {
-    margin-top: -200px;
+    margin-top: -150px;
   }
 }
 
@@ -254,15 +319,16 @@ main {
 
 @media (min-width: 280px) {
   .nosotros {
-    height: 110vh;
+    height: 110%;
   }
 
 }
 
 
-@media (min-width: 425px) {
+
+@media (min-width: 400px) {
   .nosotros {
-    height: 100vh
+    height: 100%
   }
 
 }
