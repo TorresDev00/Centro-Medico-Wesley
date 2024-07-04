@@ -98,22 +98,26 @@ main {
 .vision h1,
 .mision h1 {
   margin: 20px 0;
-  font-size: 6vw; /* Tamaño de fuente base para dispositivos móviles */
+  font-size: 6vw;
+  /* Tamaño de fuente base para dispositivos móviles */
 }
 
 .vision p,
 .mision p {
   text-align: center;
   margin: 20px 0;
-  font-size: 4vw; /* Tamaño de fuente base para dispositivos móviles */
+  font-size: 4vw;
+  /* Tamaño de fuente base para dispositivos móviles */
 }
 
 /* Ajustes para pantallas pequeñas (teléfonos) */
 @media only screen and (max-width: 480px) {
+
   .vision h1,
   .mision h1 {
     font-size: 6vw;
   }
+
   .vision p,
   .mision p {
     font-size: 4.5vw;
@@ -123,10 +127,12 @@ main {
 
 /* Ajustes para pantallas pequeñas (smartphones) */
 @media only screen and (max-width: 480px) {
+
   .vision h1,
   .mision h1 {
     font-size: 6vw;
   }
+
   .vision p,
   .mision p {
     font-size: 4vw;
@@ -135,10 +141,12 @@ main {
 
 /* Ajustes para pantallas medianas (tablets) */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
+
   .vision h1,
   .mision h1 {
     font-size: 4.5vw;
   }
+
   .vision p,
   .mision p {
     font-size: 3vw;
@@ -147,10 +155,12 @@ main {
 
 /* Ajustes para pantallas grandes (laptops y monitores pequeños) */
 @media only screen and (min-width: 769px) and (max-width: 992px) {
+
   .vision h1,
   .mision h1 {
     font-size: 5vw;
   }
+
   .vision p,
   .mision p {
     font-size: 3vw;
@@ -160,10 +170,12 @@ main {
 
 /* Ajustes para pantallas grandes (laptops y monitores medianos) */
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
+
   .vision h1,
   .mision h1 {
     font-size: 5vw;
   }
+
   .vision p,
   .mision p {
     font-size: 3.5vw;
@@ -173,10 +185,12 @@ main {
 
 /* Ajustes para pantallas grandes (laptops y monitores grandes) */
 @media only screen and (min-width: 1201px) and (max-width: 1600px) {
+
   .vision h1,
   .mision h1 {
     font-size: 3.5vw;
   }
+
   .vision p,
   .mision p {
     font-size: 2.8vw;
@@ -185,10 +199,12 @@ main {
 }
 
 @media only screen and (min-width: 1601px) {
+
   .vision h1,
   .mision h1 {
     font-size: 2vw;
   }
+
   .vision p,
   .mision p {
     font-size: 1.5vw;
@@ -197,10 +213,12 @@ main {
 
 /* Ajustes para pantallas muy grandes (4K) */
 @media only screen and (min-width: 2000px) {
+
   .vision h1,
   .mision h1 {
     font-size: 2vw;
   }
+
   .vision p,
   .mision p {
     font-size: 1.5vw;
@@ -209,10 +227,12 @@ main {
 
 /* Ajustes para pantallas medianas (tablets) */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
+
   .vision h1,
   .mision h1 {
     font-size: 5vw;
   }
+
   .vision p,
   .mision p {
     font-size: 3.5vw;
@@ -291,8 +311,10 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 90%; /* Limit the maximum width to prevent overflow */
-  max-height: 90vh; /* Limit the maximum height to prevent overflow */
+  max-width: 90%;
+  /* Limit the maximum width to prevent overflow */
+  max-height: 90vh;
+  /* Limit the maximum height to prevent overflow */
   width: 75%;
   height: 90%;
   object-fit: cover;
@@ -300,13 +322,13 @@ main {
 }
 
 @media (max-width: 768px) {
-  .principios .telefono video:nth-child(2){
+  .principios .telefono video:nth-child(2) {
     width: 75%;
   }
 }
 
 @media (max-width: 425px) {
-  .principios .telefono video:nth-child(2){
+  .principios .telefono video:nth-child(2) {
     width: 75%;
   }
 }
@@ -369,5 +391,240 @@ main {
 
   .principios .telefono video:nth-child(2) {
     width: 75%;
+  }
+}
+
+
+/**************************************
+Circulo
+****************************************/
+
+.section-circulo{
+  margin-top: 30px;
+  padding-top: 9vw;
+  padding-bottom: 9vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff;
+  border-radius: 10%;
+}
+
+/* container-circle styles */
+.container-circle {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+}
+
+/* Circle styles */
+.circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1vw solid #8bbe00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Pillar styles */
+.pillar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #8bbe00;
+  font-weight: bold;
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.pillar img {
+  width: 10vw;
+  max-width: 50px;
+  height: auto;
+  margin-bottom: 0.5vw;
+}
+
+.pillar p {
+  margin: 0;
+  font-size: 2vw;
+}
+
+/* Pillar positions */
+.pillar-quality {
+  top: 10%;
+  left: 8%;
+  transform: translateX(-50%);
+}
+
+.pillar-equality {
+  top: 18%;
+  right: 0%;
+  transform: translateY(-50%);
+}
+
+.pillar-efficacy {
+  bottom: 24%;
+  left: 4%;
+  transform: translateX(-50%);
+}
+
+.pillar-integrity {
+  top: 68%;
+  left: 82%;
+  transform: translateY(-50%);
+}
+
+.pillar-humanized-service {
+  top: 98%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Center text styles */
+.center-text {
+  position: absolute;
+  text-align: center;
+  width: 70%;
+  color: #333;
+  font-size: 3vw;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Media queries */
+
+
+@media (min-width: 1800px) {
+  .container-circle {
+    max-width: 900px;
+    width: 60vw;
+  }
+
+  .pillar img {
+    max-width: 120px;
+  }
+
+  .pillar p {
+    font-size: 1.5vw;
+  }
+
+  .center-text {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 3000px) {
+  .container-circle {
+    max-width: 1000px;
+    width: 50vw;
+  }
+
+  .pillar img {
+    max-width: 180px;
+  }
+
+  .pillar p {
+    font-size: 1.2vw;
+  }
+
+  .center-text {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-circle {
+    width: 95vw;
+  }
+
+  .pillar img {
+    width: 12vw;
+  }
+
+  .pillar p {
+    font-size: 2.5vw;
+  }
+
+  .center-text {
+    font-size: 3.5vw;
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-circle {
+    width: 100vw;
+  }
+
+  .pillar img {
+    width: 10vw;
+  }
+
+  .pillar p {
+    font-size: 3vw;
+  }
+
+  .center-text {
+    font-size: 4vw;
+    width: 90%;
+  }
+
+  .pillar-quality {
+    top: 5%;
+    left: 10%;
+  }
+
+  .pillar-equality {
+    top: 15%;
+    right: 5%;
+  }
+
+  .pillar-efficacy {
+    bottom: 20%;
+    left: 5%;
+  }
+
+  .pillar-integrity {
+    top: 69%;
+    left: 80%;
+  }
+
+  .pillar-humanized-service {
+    top: 95%;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 480px) {
+  .pillar-quality {
+    top: -1%;
+    left: 15%;
+  }
+
+  .pillar-equality {
+    top: 15%;
+    right: 0%;
+  }
+
+  .pillar-efficacy {
+    bottom: 20%;
+    left: 5%;
+  }
+
+  .pillar-integrity {
+    top: 65%;
+    left: 75%;
   }
 }
