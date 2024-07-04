@@ -2,9 +2,7 @@
 
 @font-face {
   font-family: 'monserrat-medium';
-  /* Nombre que se le dará a la fuente */
   src: url('../font-family/Montserrat-Medium.otf') format('opentype');
-  /* Ruta donde se encuentra el archivo .otf */
 }
 
 @font-face {
@@ -44,6 +42,7 @@
   --bs-secondary: var(--color-secondary);
   --bs-third: var(--color-third);
   --bs-color-section: var(--color-secondary);
+  --bs-bg-absolute: var(--color-black);
 }
 
 :root[data-bs-theme="dark"] {
@@ -54,6 +53,7 @@
   --bs-secondary: var(--color-secondary);
   --bs-third: var(--color-background-dark);
   --bs-color-section: var(--color-black);
+  --bs-bg-absolute: var(--color-text-light);
 }
 
 body,
@@ -114,9 +114,7 @@ body {
   font-size: .875rem;
   border-radius: .5rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  /* Agrega sombra suave al menú */
   background-color: var(--bs-color-section);
-  /* Color de fondo del menú */
 }
 
 #bd-theme-text{
@@ -197,10 +195,9 @@ color: var(--color-text-light);
   color: var(--bs-body-color-text);
 }
 
-/* Cambiar color del icono del tema */
+
 .theme-icon-active {
   color: var(--color-text-light);
-  /* Color amarillo como ejemplo, cámbialo según tu preferencia */
 }
 
 #citaNow {
@@ -218,7 +215,7 @@ color: var(--color-text-light);
 #header {
   padding: 10rem 0;
   background-color: var(--bs-primary);
-  color: var(--bs-body-color);
+  color: var(--color-text-light);
 }
 
 #header #title_1 h1 {
@@ -554,7 +551,7 @@ color: var(--color-text-light);
 }
 
 .eslogan .highlight_2 {
-  color: var(--bs-body-color);
+  color: var(--color-text-light);
   background: linear-gradient(90deg, rgb(158 139 255), rgb(136 150 255), rgb(16 76 137));
 }
 
@@ -612,7 +609,7 @@ color: var(--color-text-light);
 }
 
 #testimonios .info a {
-  color: var(--bs-body-color);
+  color: var(--color-text-light);
 }
 
 #testimonios .info a i {
@@ -893,4 +890,8 @@ color: var(--color-text-light);
 
 #footer .link-footer li a {
   color: var(--color-background-light);
+}
+
+#footer .link-footer ul li a{
+  font-size: 20px;
 }
