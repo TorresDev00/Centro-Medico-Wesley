@@ -2,22 +2,19 @@
 <html lang="es" data-bs-theme="light">
 
 <head>
-    <meta charset='utf-8'>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Wesley</title>
     <meta name="description" content="Centro Medico Wesleyano: Construyendo una comunidad saludable y plena">
     <meta name="keywords"
         content="Centro Médico Wesley, servicios médicos, atención médica, cuidado integral, salud, medicina, clínica, doctores, Venezuela, enfermedades, tratamientos, consultas médicas, bienestar, salud preventiva, especialistas médicos">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <link href="assets/css/style.css" rel="stylesheet">
-</head>
+    <link href="assets/css/contacto.css" rel="stylesheet">
 
 <body>
-
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
         <div class="container my-1">
@@ -77,64 +74,61 @@
                             <div class="vr d-none d-lg-flex h-75 mx-lg-2 text-white"></div>
                             <hr class="d-lg-none my-2 text-white-25">
                         </li>
-                        <button id="theme-toggle" class="btn btn-link nav-link py-2 px-0 px-lg-2 d-flex align-items-center">
-                            <i id="theme-icon" class="bi bi-sun-fill my-1"></i>
-                            <span class="d-lg-none ms-2" id="theme-text">Light</span>
-                        </button>
+                        <li class="nav-item col-6 col-lg-auto py-3 px-1">
+                            <!-- Theme Switcher Button -->
+                            <button id="theme-toggle"
+                                class="btn btn-link nav-link py-2 px-0 px-lg-2 d-flex align-items-center">
+                                <i id="theme-icon" class="bi bi-sun-fill my-1"></i>
+                                <span class="d-lg-none ms-2" id="theme-text">Light</span>
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
-    <header id="header">
-        <section>
-            <div class="row">
-                <div id="title_1" class="col-12">
-                    <h1 class="text-center">BIENVENIDOS</h1>
-                </div>
-                <div id="title_2" class="col-12">
-                    <h1 class="text-center">CENTRO MEDICO WESLEY</h1>
-                </div>
-            </div>
-        </section>
-    </header>
-    <main id="main">
 
-        <section id="valores" class="pt-5 ps-lg-2">
-            <div class="p-lg-5 ps-3">
-                <h2 class="text-start text-1">Nuestros valores</h2>
-                <h2 class="text-start text-1">nos impulsan</h2>
-            </div>
-            <div id="values" class="px-2">
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4 pt-4">
-                        <div class="boxValues text-center">
-                            <dotlottie-player class="icono_1"
-                                src="https://lottie.host/968587ee-a17a-4189-850c-f1148e2876a6/H5KFy0izLD.json"
-                                background="transparent" speed="1" style="width: 280px; height: 280px;" loop autoplay>
-                            </dotlottie-player>
-                            <h3 class="title">Respeto</h3>
+    <main class="main">
+
+        <section id="sectionContact">
+            <div id="formBox" class="container col-xl-6 col-lg-8 col-sm-8 py-5 p-sm-5">
+                <div class="my-4">
+                    <h2 class="text-center">Contactanos</h2>
+                </div>
+    
+                <div class="formulario">
+                    <form>
+                        <div class="mb-4">
+                            <div class="input-group">
+                                <button type="button" class="iconos btn btn-color"><i class="bi bi-envelope"></i></button>
+                                <input type="text" placeholder="email" class="form-control" id="email">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 pt-4">
-                        <div class="boxValues text-center">
-                            <dotlottie-player class="icono_2"
-                                src="https://lottie.host/6b3ed607-7270-4676-95f7-7f60a2a3612b/L2ARMJ86OV.json"
-                                background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
-                            </dotlottie-player>
-                            <h3 class="title">Responsabilidad</h3>
+    
+                        <div class="row">
+                            <div class="mb-4 col-sm-6">
+                                <div class="input-group">
+                                    <button type="button" class="iconos btn btn-color"><i
+                                            class="bi bi-telephone"></i></button>
+                                    <input type="number" placeholder="Telefono" class="form-control" id="telefono">
+                                </div>
+                            </div>
+                            <div class="mb-4 col-sm-6">
+                                <div class="input-group">
+                                    <button type="button" class="iconos btn btn-color"><i
+                                            class="bi bi-people-fill"></i></button>
+                                    <input type="text" placeholder="Nombre" class="form-control" id="name">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 pt-4">
-                        <div class="boxValues text-center">
-                            <dotlottie-player class="icono_3"
-                                src="https://lottie.host/7d5079d6-a3b3-463f-8038-f8033ec25df1/u2cdW0cFTB.json"
-                                background="transparent" speed="1" style="width: 520px; height: 520px;" loop autoplay>
-                            </dotlottie-player>
-                            <h3 class="title">Amor</h3>
-                        </div>
+    
+                    </form>
+    
+                    <div class="d-grid">
+                        <button class="btn btn-color" type="submit" id="registrar">Registrar</button>
                     </div>
                 </div>
+    
             </div>
         </section>
 
@@ -145,93 +139,9 @@
             </h1>
         </div>
 
-
-        <section id="testimonios" class="my-5 mx-2">
-            <div class="imgTest">
-                <img src="assets/img/medico.png" alt="medico" class="medico-img">
-            </div>
-            <div class="row">
-                <div class="col-7 ps-4">
-                    <h3 class="p1">TES</h3>
-                    <h3 class="p2">TIMO</h3>
-                    <h3 class="p3">NIOS</h3>
-                </div>
-                <div class="col-5">
-                    <section class="test-align">
-                        <div class="info">
-                            <p>Nuestros pacientes
-                                han visto grandes
-                                resultados a través de
-                                una atención de
-                                excelencia.</p>
-                            <a href="index.html"><i class="bi bi-plus-circle-fill"></i></a>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </section>
-
-        <section id="box" class="d-flex justify-content-center align-items-center">
-            <div class="row">
-                <div class="col-12 d-flex justify-content-center">
-                    <div class="boxValues text-center p-4">
-                        <i class="bi bi-heart-fill icon"></i>
-                        <h3>Cambiamos tu estilo de vida</h3>
-                        <h3> en un <strom class="highlight">bienestar</strom> integral.</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="servicios" class="container my-4">
-            <div class="row">
-
-                <div class="col-12">
-
-                    <div class="servicios swiper mt-2 pt-5">
-                        <div class="swiper-wrapper mb-5">
-
-                            <div class="swiper-slide">
-                                <div class="icon-box-full" data-bs-toggle="modal"
-                                    data-bs-target="#modalInterpretacionBiblica">
-                                    <img src="https://img.freepik.com/foto-gratis/doctor-usando-microscopio-comprobar-muestra-covid_23-2148747862.jpg"
-                                        alt="Imagen de " class="img-fluid">
-                                </div>
-                            </div><!-- End materia item -->
-
-                            <div class="swiper-slide">
-                                <div class="icon-box-full" data-bs-toggle="modal"
-                                    data-bs-target="#modalRedaccionLectura">
-                                    <img src="https://img.freepik.com/foto-gratis/doctor-usando-microscopio-comprobar-muestra-covid_23-2148747862.jpg"
-                                        alt="Imagen de " class="img-fluid">
-                                </div>
-                            </div><!-- End materia item -->
-
-                            <div class="swiper-slide">
-                                <div class="icon-box-full" data-bs-toggle="modal"
-                                    data-bs-target="#modalFamiliaCristiana">
-                                    <img src="https://img.freepik.com/foto-gratis/doctor-usando-microscopio-comprobar-muestra-covid_23-2148747862.jpg"
-                                        alt="Imagen de " class="img-fluid">
-                                </div>
-                            </div><!-- End materia item -->
-
-                        </div>
-
-                        <div class="pagination">
-                            <div class="swiper-pagination"></div>
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
     </main>
+
+
     <footer id="footer" class="py-4">
         <div class="container">
             <div class="row">
@@ -256,7 +166,7 @@
                 </div>
                 <div class="link-footer col-12">
                     <ul class="nav justify-content-center mb-3">
-                        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Programas</a></li>
@@ -264,7 +174,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="row derechos">
+            <div class="row">
                 <div class="col-12 text-center">
                     <p class="mb-0">&copy; 2024 Centro Médico Wesley. Todos los derechos reservados.</p>
                 </div>
@@ -272,9 +182,8 @@
         </div>
     </footer>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/vendor/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/contactos.js"></script>
 </body>
 
 </html>

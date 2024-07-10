@@ -2,7 +2,6 @@
 Navbar
 ****************************************/
 
-
 #navbar {
   background: var(--bs-color-section);
 }
@@ -176,12 +175,12 @@ Nosotros
 
   .vision h1,
   .mision h1 {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 
   .vision p,
   .mision p {
-    font-size: 3.5vw;
+    font-size: 2vw;
     text-align: justify;
   }
 }
@@ -191,12 +190,12 @@ Nosotros
 
   .vision h1,
   .mision h1 {
-    font-size: 3.5vw;
+    font-size: 3.2vw;
   }
 
   .vision p,
   .mision p {
-    font-size: 2.8vw;
+    font-size: 2.2vw;
     text-align: justify;
   }
 }
@@ -349,7 +348,7 @@ Principios - Telefono
 
 @media (min-width: 786px) {
   .nosotros {
-    height: 90vh;
+    height: 120vh;
   }
 
 }
@@ -357,7 +356,22 @@ Principios - Telefono
 /* Estilos para pantallas más grandes */
 @media (min-width: 1200px) {
   .nosotros {
-    height: 125vh;
+    height: 180vh;
+  }
+
+  .vision p,
+  .mision p {
+    padding: 0 60px;
+  }
+
+  .principios .telefono video:nth-child(2) {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .nosotros {
+    height: 100vh;
   }
 
   .vision p,
@@ -620,6 +634,9 @@ Circulo
   }
 }
 
+/***************************************
+ ----------Contactanos -----------------
+ ****************************************/
 
 .contactanos {
   width: 100%;
@@ -639,46 +656,342 @@ Circulo
   background-size: cover;
   padding: 60px 0;
   color: var(--bs-body-color-text);
+  position: relative;
 }
 
-.text-chat{
+.text-chat {
   margin-top: 22%;
 }
 
-.chat_1{
-  padding: 20px 200px 0 100px;
+.chat_1, .chat_2, .chat_3, .chat_4 {
+  position: absolute;
+  transform-origin: center;
+}
+
+.chat_1 {
+  top: 20px;
+  left: 100px;
   transform: rotate(355deg);
 }
 
-.chat_1 h2{
+.chat_1 h2 {
   font-size: calc(20px + 4rem);
 }
 
 .chat_2 {
-  padding: 260px 200px 0 290px;
+  top: 260px;
+  left: 290px;
   transform: rotate(357deg);
 }
 
-.chat_2 h2{
+.chat_2 h2 {
   font-size: calc(5px + 4rem);
 }
 
 .chat_3 {
-  padding: 100px 45px 0 490px;
+  top: 100px;
+  left: 490px;
   transform: rotate(364deg);
 }
 
-.chat_3 h2{
+.chat_3 h2 {
   font-size: calc(5px + 3.5rem);
 }
 
 .chat_4 {
-  padding: 215px 45px 0 160px;
+  top: 215px;
+  left: 160px;
   transform: rotate(360deg);
 }
 
-.chat_4 h2{
+.chat_4 h2 {
   font-weight: bold;
   color: var(--color-black);
   font-size: calc(5px + 2.6rem);
+}
+
+@media (min-width: 280px) and (max-width: 379px) {
+  .background-img {
+    min-height: 472px;
+  }
+  .text-chat {
+    margin-top: 10%;
+  }
+  .chat_1 {
+    top: 120px;
+    left: 45px;
+    padding: 0px 105px 0 0px;
+  }
+  .chat_1 h2 {
+    font-size: 1.2rem;
+  }
+  .chat_2 {
+    top: 260px;
+    left: 20px;
+  }
+  .chat_2 h2 {
+    font-size: 1.1rem;
+  }
+  .chat_3 {
+    top: 325px;
+    left: 85px;
+    padding: 0px 84px 0 20px;
+  }
+  .chat_3 h2 {
+    font-size: 1rem;
+  }
+  .chat_4 {
+    top: 416px;
+    left: 10px;
+  }
+  .chat_4 h2 {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 576px) {
+  .background-img {
+    min-height: 535px;
+  }
+  .text-chat {
+    margin-top: 10%;
+  }
+  .chat_1 {
+    top: 125px;
+    left: 40px;
+    padding: 0px 105px 0 0px;
+  }
+  .chat_1 h2 {
+    font-size: 1.5rem;
+  }
+  .chat_2 {
+    top: 292px;
+    left: 30px;
+  }
+  .chat_2 h2 {
+    font-size: 1.5rem;
+  }
+  .chat_3 {
+    top: 365px;
+    left: 140px;
+    padding: 0px 160px 0 20px;
+  }
+  .chat_3 h2 {
+    font-size: 1.2rem;
+  }
+  .chat_4 {
+    top: 472px;
+    left: 20px;
+  }
+  .chat_4 h2 {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets (576px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .background-img {
+    min-height: 905px;
+  }
+  .text-chat {
+    margin-top: 15%;
+  }
+  .chat_1 {
+    top: 255px;
+    left: 40px;
+    padding: 0px 165px 0 50px;
+  }
+  .chat_1 h2 {
+    font-size: 2rem;
+  }
+  .chat_2 {
+    top: 500px;
+    left: 30px;
+  }
+  .chat_2 h2 {
+    font-size: 2rem;
+  }
+  .chat_3 {
+    top: 630px;
+    left: 230px;
+    padding: 0 245px 0 20px;
+  }
+  .chat_3 h2 {
+    font-size: 1.8rem;
+  }
+  .chat_4 {
+    top: 795px;
+    left: 35px;
+  }
+  .chat_4 h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Medium devices (768px to 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .background-img {
+    min-height: 900px;
+  }
+  .text-chat {
+    margin-top: 18%;
+  }
+  .chat_1 {
+    top: 255px;
+    left: 40px;
+    padding: 0px 165px 0 50px;
+  }
+  .chat_1 h2 {
+    font-size: 2.5rem;
+  }
+  .chat_2 {
+    top: 495px;
+    left: 30px;  
+  }
+  .chat_2 h2 {
+    font-size: 2.5rem;
+  }
+  .chat_3 {
+    top: 610px;
+    left: 230px;
+    padding: 0 245px 0 20px;
+  }
+  .chat_3 h2 {
+    font-size: 2.1rem;
+  }
+  .chat_4 {
+    top: 795px;
+    left: 30px;
+  }
+  .chat_4 h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Large devices (992px to 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .background-img {
+    min-height: 1200px;
+  }
+  .text-chat {
+    margin-top: 20%;
+  }
+  .chat_1 {
+    top: 320px;
+    left: 40px;
+    padding: 0px 165px 0 50px;
+  }
+  .chat_1 h2 {
+    font-size: 2.8rem;
+  }
+  .chat_2 {
+    top: 665px;
+    left: 50px;
+  }
+  .chat_2 h2 {
+    font-size: 3rem;
+  }
+  .chat_3 {
+    top: 790px;
+    left: 230px;
+    padding: 0 300px 0 135px;
+  }
+  .chat_3 h2 {
+    font-size: 2.8rem;
+  }
+  .chat_4 {
+    top: 1060px;
+    left: 40px;
+  }
+  .chat_4 h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Extra large devices (1200px to 1700px) */
+@media (min-width: 1201px) and (max-width: 1700px) {
+  .background-img {
+    min-height: 1700px;
+  }
+  .text-chat {
+    margin-top: 21%;
+  }
+  .chat_1 {
+    top: 410px;
+    left: 40px;
+    padding: 0 235px 0 50px;
+  }
+  .chat_1 h2 {
+    font-size: 5rem;
+  }
+  .chat_2 {
+    top: 945px;
+    left: 50px;
+  }
+  .chat_2 h2 {
+    font-size: 3.5rem;
+  }
+  .chat_3 {
+    top: 1170px;
+    left: 240px;
+    padding: 0 300px 0 220px;
+  }
+  .chat_3 h2 {
+    font-size: 3.8rem;
+  }
+  .chat_4 {
+    top: 1500px;
+    left: 50px;
+  }
+  .chat_4 h2 {
+    font-size: 3rem;
+  }
+}
+
+/* 4K and larger screens (1700px and up) */
+@media (min-width: 1701px) {
+  .background-img {
+    min-height: 1700px;
+  }
+  .text-chat {
+    margin-top: 21%;
+  }
+  .chat_1 {
+    top: 410px;
+    left: 40px;
+    padding: 0 235px 0 50px;
+  }
+  .chat_1 h2 {
+    font-size: 5rem;
+  }
+  .chat_2 {
+    top: 945px;
+    left: 50px;
+  }
+  .chat_2 h2 {
+    font-size: 3.5rem;
+  }
+  .chat_3 {
+    top: 1170px;
+    left: 240px;
+    padding: 0 300px 0 220px;
+  }
+  .chat_3 h2 {
+    font-size: 3.8rem;
+  }
+  .chat_4 {
+    top: 1500px;
+    left: 50px;
+  }
+  .chat_4 h2 {
+    font-size: 3rem;
+  }
+}
+
+/**************************************
+Footer
+****************************************/
+
+#footer {
+  background: var(--bs-color-section);
 }

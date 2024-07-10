@@ -1,31 +1,32 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    document.querySelectorAll('[data-bs-theme-value]').forEach(button => {
-        button.addEventListener('click', function () {
-            const theme = this.getAttribute('data-bs-theme-value');
-            document.documentElement.setAttribute('data-bs-theme', theme);
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeText = document.getElementById('theme-text');
     
-            // Update active button
-            document.querySelectorAll('.dropdown-item').forEach(item => {
-                item.classList.remove('active');
-                item.setAttribute('aria-pressed', 'false');
-            });
-            this.classList.add('active');
-            this.setAttribute('aria-pressed', 'true');
+    let isDarkMode = false;
     
-            // Update theme icon
-            const icon = document.querySelector('.theme-icon-active');
-            if (theme === 'light') {
-                icon.classList.remove('bi-moon-stars-fill');
-                icon.classList.add('bi-sun-fill');
-                document.getElementById('bd-theme-text').textContent = 'Light';
-            } else {
-                icon.classList.remove('bi-sun-fill');
-                icon.classList.add('bi-moon-stars-fill');
-                document.getElementById('bd-theme-text').textContent = 'Dark';
-            }
-        });
-    });
+    function toggleTheme() {
+      const htmlElement = document.documentElement;
+      if (htmlElement.getAttribute('data-bs-theme') === 'light') {
+        htmlElement.setAttribute('data-bs-theme', 'dark');
+        htmlElement.classList.add('dark');
+        themeIcon.classList.remove('bi-sun-fill');
+        themeIcon.classList.add('bi-moon-fill');
+        themeText.textContent = 'Dark';
+      } else {
+        htmlElement.setAttribute('data-bs-theme', 'light');
+        htmlElement.classList.remove('dark');
+        themeIcon.classList.remove('bi-moon-fill');
+        themeIcon.classList.add('bi-sun-fill');
+        themeText.textContent = 'Light';
+      }
+      isDarkMode = !isDarkMode;
+    }
+    
+    themeToggle.addEventListener('click', toggleTheme);
+    
+    
     
     const swiper = new Swiper('.servicios', {
         speed: 600,
