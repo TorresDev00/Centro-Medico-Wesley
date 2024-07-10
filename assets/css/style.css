@@ -31,6 +31,7 @@
   --color-text-dark: #333;
   --color-background-light: #f5f5f5;
   --color-background-dark: #222;
+  --color-backgraund-grey: rgb(234, 234, 234);
   --color-black: #000;
   --color-yellow: #fbff00;
 }
@@ -45,6 +46,7 @@
   --bs-color-section: var(--color-secondary);
   --bs-bg-absolute: var(--color-black);
   --bs-check-mode : var(--color-text-light);
+  --bs-bg: var(--color-backgraund-grey);
 }
 
 :root[data-bs-theme="dark"] {
@@ -57,6 +59,7 @@
   --bs-color-section: var(--color-black);
   --bs-bg-absolute: var(--color-text-light);
   --bs-check-mode : var(--color-text-light);
+  --bs-bg: var(--color-background-dark);
 }
 
 body,
@@ -468,14 +471,14 @@ body {
   font-size: 4.5vw;
   font-weight: bold;
   line-height: 1.2;
-  background: linear-gradient(90deg, rgb(25, 91, 158), rgb(0 162 149), rgb(139 190 0));
+  background: linear-gradient(90deg,rgb(139 190 0), rgb(136 150 255), rgb(63 190 238) ,rgb(158 139 255), rgb(136 150 255) , rgb(255, 121, 91) );
   background-clip: text;
   color: transparent;
 }
 
 .eslogan .highlight_2 {
   color: var(--color-text-light);
-  background: linear-gradient(90deg, rgb(158 139 255), rgb(136 150 255), rgb(16 76 137));
+  background: linear-gradient(90deg, rgb(158 139 255),rgb(63 190 238) ,rgb(136 150 255), rgb(16 76 137));
 }
 
 /* Testiminios */

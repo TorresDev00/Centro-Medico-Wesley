@@ -3,7 +3,7 @@ Genaral
 ****************************************/
 
 body{
-    background: #eaeaea
+    background: var(--bs-bg)
 }
 
 /**************************************
@@ -40,7 +40,7 @@ Navbar
   
   main {
     width: 100%;
-    background: #eaeaea
+    background: var(--bs-bg)
   }
 
   #sectionContact{
@@ -58,7 +58,7 @@ Navbar
 
   .btn-color {
     background: var(--bs-color-section);
-    color: var(--bs-body-color-text);
+    color: var(--color-text-light);
     transition: background 0.2s ease-in-out;
   }
   
@@ -77,10 +77,13 @@ Navbar
     background: var(--bs-color-section);
     color: var(--bs-body-color-text);
   }
-  
+  .btn-color i{
+    color: var(--color-text-light)
+  }
+
   .btn-color:active i,
   .btn-color:focus i {
-    color: var(--bs-body-color-text);
+    color: var(--color-background-light);
   }
 
   .form-control{
