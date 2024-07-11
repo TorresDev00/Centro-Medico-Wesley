@@ -49,6 +49,7 @@
   --bs-third: var(--color-third);
   --bs-color-section: var(--color-secondary);
   --bs-bg-absolute: var(--color-black);
+  --bs-body-absolute2: var(--color-text-light);
   --bs-check-mode : var(--color-text-light);
   --bs-bg: var(--color-backgraund-grey);
   --gradient-multicolor: var(--gradient-multicolor-light);
@@ -64,6 +65,7 @@
   --bs-third: var(--color-background-dark);
   --bs-color-section: var(--color-black);
   --bs-bg-absolute: var(--color-text-light);
+  --bs-body-absolute2: var(--color-black);
   --bs-check-mode : var(--color-text-light);
   --bs-bg: var(--color-background-dark);
   --gradient-multicolor: var(--gradient-multicolor-dark);

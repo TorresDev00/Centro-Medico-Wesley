@@ -1,0 +1,177 @@
+/**************************************
+Genaral
+****************************************/
+
+body {
+    background: var(--bs-bg)
+}
+
+/**************************************
+Navbar
+****************************************/
+
+#navbar {
+    background: var(--bs-bg);
+
+}
+
+#navbar li a {
+ color: var(--bs-body-color-text);
+}
+
+#mobileMenu {
+    background: var(--bs-bg);
+}
+
+.navbar-toggler:hover,
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--color-third) !important;
+}
+
+.offcanvas-title{
+    color: var(--bs-body-color-text);
+}
+
+.vr{
+    color: var(--bs-body-color-text);
+}
+
+#citaNow {
+    background-color: var(--color-primary);
+}
+
+#citaNow {
+    color: var(--color-background-light) !important
+}
+
+#citaNow:hover {
+    background-color: var(--bs-color-section);
+}
+
+#theme-icon {
+    color: var(--bs-body-color-text);
+  }
+  
+  #theme-text{
+    color: var(--bs-body-color-text);
+  }
+
+
+
+/**************************************
+  Main
+****************************************/
+
+
+main {
+    width: 100%;
+    background: var(--bs-bg)
+}
+
+/**************************************
+  Servicios
+****************************************/
+
+#servicio .text-1{
+    color: var(--bs-body-color-text);
+    font-size: calc(3vw + 1rem);
+}
+
+#servicio .text-1 .text-darkCyan,
+#servicio .title .text-darkCyan{
+    color: var(--color-primary);
+}
+
+.boxService {
+    background-color: var(--bs-body-absolute2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: start;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.boxService i {
+    font-size: 2rem;
+    color: #000;
+    border-radius: 50%;
+    padding: 4px;
+    margin-bottom: 10px;
+}
+.boxService .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--bs-body-color-text);
+}
+@media (min-width: 576px) {
+    .boxService .title {
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 768px) {
+    .boxService .title {
+        font-size: 1.75rem;
+    }
+}
+@media (min-width: 1200px) {
+    .boxService .title {
+        font-size: 2rem;
+    }
+}
+@media (min-width: 1600px) {
+    .boxService .title {
+        font-size: 4.25rem;
+    }
+}
+.column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 992px){
+    .column {
+        display: block;
+    }
+}
+.btnService {
+    margin-top: 20px;
+    align-self: center;
+    border-radius: 50%;
+    background: var(--color-secondary);
+}
+
+.btnService:hover {
+    background: rgb(0, 139, 128) !important;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .btnService:not(:hover) {
+    cursor: default;
+  }
+  
+  .btnService:active,
+  .btnService:focus {
+    background: rgb(0, 139, 128);
+    /* Cambia ligeramente el color de fondo al seleccionar el botón */
+    color: #ffffff;
+  }
+
+  .plus {
+    background-image: url(../img/iconos/plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto !important
+}
+  

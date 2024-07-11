@@ -640,13 +640,14 @@ Circulo
 
 .contactanos {
   width: 100%;
-  background: var(--bs-body-color-text);
+  background: var(--color-text-light);
   text-align: center;
   color: var(--bs-body-bg); /* Asegúrate de que la variable esté definida */
 }
 
 .contactanos h1{
   font-weight: bold;
+  color: var(--color-black);
 }
 
 .background-img {
@@ -655,7 +656,7 @@ Circulo
   background: url("../img/contactos.png") center center no-repeat;
   background-size: cover;
   padding: 60px 0;
-  color: var(--bs-body-color-text);
+  color: var(--color-text-light);
   position: relative;
 }
 
