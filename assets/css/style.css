@@ -34,6 +34,10 @@
   --color-backgraund-grey: rgb(234, 234, 234);
   --color-black: #000;
   --color-yellow: #fbff00;
+  --gradient-multicolor-dark: linear-gradient(90deg,  rgb(0, 255, 0), rgb(0, 255, 255), rgb(0, 128, 255),rgb(255, 0, 255),rgb(255, 0, 128), rgb(255, 255, 0) );
+  --gradient-multicolor-light: linear-gradient(90deg, rgb(139 190 0), rgb(136 150 255), rgb(63 190 238), rgb(158 139 255), rgb(136 150 255), rgb(255, 121, 91));
+  --gradient-multicolor-2-light: linear-gradient(90deg, rgb(158 139 255),rgb(63 190 238) ,rgb(136 150 255), rgb(16 76 137));
+  --gradient-multicolor-2-dark: linear-gradient(90deg, rgb(120, 0, 255), rgb(0 231 231), rgb(180 0 255), rgb(0 6 255));     
 }
 
 :root[data-bs-theme="light"] {
@@ -47,6 +51,8 @@
   --bs-bg-absolute: var(--color-black);
   --bs-check-mode : var(--color-text-light);
   --bs-bg: var(--color-backgraund-grey);
+  --gradient-multicolor: var(--gradient-multicolor-light);
+  --gradient-multicolor-2: var(--gradient-multicolor-2-light);
 }
 
 :root[data-bs-theme="dark"] {
@@ -60,6 +66,8 @@
   --bs-bg-absolute: var(--color-text-light);
   --bs-check-mode : var(--color-text-light);
   --bs-bg: var(--color-background-dark);
+  --gradient-multicolor: var(--gradient-multicolor-dark);
+  --gradient-multicolor-2: var(--gradient-multicolor-2-dark);
 }
 
 body,
@@ -471,14 +479,14 @@ body {
   font-size: 4.5vw;
   font-weight: bold;
   line-height: 1.2;
-  background: linear-gradient(90deg,rgb(139 190 0), rgb(136 150 255), rgb(63 190 238) ,rgb(158 139 255), rgb(136 150 255) , rgb(255, 121, 91) );
+  background: var( --gradient-multicolor);
   background-clip: text;
   color: transparent;
 }
 
 .eslogan .highlight_2 {
   color: var(--color-text-light);
-  background: linear-gradient(90deg, rgb(158 139 255),rgb(63 190 238) ,rgb(136 150 255), rgb(16 76 137));
+  background: var(--gradient-multicolor-2) ;
 }
 
 /* Testiminios */
