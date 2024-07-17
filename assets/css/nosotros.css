@@ -509,6 +509,15 @@ Circulo
   transform: translate(-50%, -50%);
 }
 
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
 /* Media queries */
 
 
@@ -662,6 +671,10 @@ Circulo
 
 .text-chat {
   margin-top: 22%;
+}
+
+.text-chat h2 {
+  display: none;
 }
 
 .chat_1, .chat_2, .chat_3, .chat_4 {
