@@ -95,13 +95,13 @@ main {
     justify-content: center;
     align-items: start;
 }
-.boxService i {
-    font-size: 2rem;
-    color: #000;
-    border-radius: 50%;
-    padding: 4px;
-    margin-bottom: 10px;
+
+.icon-container img {
+    /* Ajusta el tamaño y otros estilos de la imagen según tus necesidades */
+    width: 60px;
+    height: auto;
 }
+
 .boxService .title {
     font-size: 1.25rem;
     font-weight: bold;

@@ -1,0 +1,161 @@
+/**************************************
+Genaral
+****************************************/
+
+body {
+    background: var(--bs-bg)
+}
+
+/**************************************
+Navbar
+****************************************/
+
+#navbar {
+    background: var(--bs-bg);
+
+}
+
+#navbar li a {
+ color: var(--bs-body-color-text);
+}
+
+#mobileMenu {
+    background: var(--bs-bg);
+}
+
+.navbar-toggler:hover,
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--color-third) !important;
+}
+
+.offcanvas-title{
+    color: var(--bs-body-color-text);
+}
+
+.vr{
+    color: var(--bs-body-color-text);
+}
+
+#citaNow {
+    background-color: var(--color-primary);
+}
+
+#citaNow {
+    color: var(--color-background-light) !important
+}
+
+#citaNow:hover {
+    background-color: var(--bs-color-section);
+}
+
+#theme-icon {
+    color: var(--bs-body-color-text);
+  }
+  
+  #theme-text{
+    color: var(--bs-body-color-text);
+  }
+
+
+
+/**************************************
+  Main
+****************************************/
+
+main {
+    width: 100%;
+    background: var(--bs-bg)
+}
+
+/**************************************
+Background
+****************************************/
+
+.background{
+    background-image: url('https://eventos.urquiabas.com/wp-content/uploads/2021/01/Somos-eventos-personal-medico-1024x682.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-items: center;
+    align-items: end;
+    height: 100vh;
+}
+
+.content {
+    text-align: center;
+    color: var(--color-text-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.content .greenColor{
+    color: var(--color-primary);
+}
+
+.background_2{
+    background-image: url('https://eventos.urquiabas.com/wp-content/uploads/2021/01/Somos-eventos-personal-medico-1024x682.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 120vh;
+}
+
+.content_2 {
+    text-align: start;
+    color: var(--color-text-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content_2 h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.background_2{
+    background-image: url('https://dif.slp.gob.mx/wp-content/uploads/2022/08/150722-2602-DIF-ARRANCA-EL-DIF-ESTATAL-NUEVA-FERIA-DE-LA-SALUD-EN-EL-ALTIPLANO-5-1024x682.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 120vh;
+}
+
+.content_2 {
+    text-align: start;
+    color: var(--color-text-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content_2 h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.background_3{
+    background-image: url('https://media.meer.com/attachments/3e42dcf55d4022b73ba384ccc218b8906c272406/store/fill/1090/613/47f191bf67353140d82548979a78be0b7feb19f4b9a83c8b6a51c49b4ef7/Infancia-en-la-calle.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-items: center;
+    align-items: end;
+    height: 120vh;
+}
+
+.content_3 {
+    text-align: start;
+    color: var(--color-text-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content_3 h1 {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
