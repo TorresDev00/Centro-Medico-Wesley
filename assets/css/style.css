@@ -315,7 +315,7 @@ body {
   height: 50vh;
   padding-bottom: 100%;
   background: var(--bs-body-bg);
-  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.12);
+  box-shadow: 10px 8px 30px rgba(0, 0, 0, 0.15) ;
   transition: all 0.3s ease-in-out;
   border-radius: 3vw;
   position: relative;
@@ -325,7 +325,7 @@ body {
 }
 
 #valores .boxValues:hover {
-  box-shadow: 10px 8px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.12) ;
   transform: translateY(-5px);
 }
 
