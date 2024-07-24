@@ -315,7 +315,7 @@ body {
 #valores .boxValues {
   padding: 30px;
   width: 100%;
-  height: 50vh;
+  height: 25vh;
   padding-bottom: 100%;
   background: var(--bs-body-bg);
   box-shadow: 10px 8px 30px rgba(0, 0, 0, 0.15) ;
@@ -340,7 +340,7 @@ body {
   /* Ajusta el espaciado entre el icono y el texto */
 }
 
-/* Responsividad de las fuentes */
+/* Responsividad de las fuentes
 @media only screen and (max-width: 480px) {
   #valores .boxValues h3 {
     font-size: 9vw;
@@ -375,7 +375,7 @@ body {
   #valores .boxValues h3 {
     font-size: 3vw;
   }
-}
+} */
 
 /* @media de icono animado */
 /* Tamaño para pantallas muy pequeñas */
@@ -438,18 +438,18 @@ body {
 /* Tamaño para pantallas grandes */
 @media (min-width: 992px) {
   .icono_1 {
-    width: 230px !important;
-    height: 230px !important;
+    width: 210px !important;
+    height: 210px !important;
   }
 
   .icono_2 {
-    width: 230px !important;
-    height: 230px !important;
+    width: 210px !important;
+    height: 210px !important;
   }
 
   .icono_3 {
-    width: 400px !important;
-    height: 400px !important;
+    width: 380px !important;
+    height: 380px !important;
   }
 
 }
@@ -457,18 +457,18 @@ body {
 /* Tamaño para pantallas extra grandes */
 @media (min-width: 1200px) {
   .icono_1 {
-    width: 280px !important;
-    height: 280px !important;
+    width: 260px !important;
+    height: 260px !important;
   }
 
   .icono_2 {
-    width: 300px !important;
-    height: 300px !important;
+    width: 260px !important;
+    height: 260px !important;
   }
 
   .icono_3 {
-    width: 520px !important;
-    height: 520px !important;
+    width: 460px !important;
+    height: 460px !important;
   }
 }
 
@@ -665,6 +665,72 @@ body {
   margin: 5px auto !important
 }
 
+/* Modal */
+
+body.modal-open {
+  padding-right: 15px; /* Ajusta este valor según el ancho de la barra de desplazamiento */
+}
+
+
+.no-border-bottom {
+  border-bottom: none !important;
+}
+
+.modal-content{
+  background-color: var(--bs-color-section) !important;
+}
+
+
+.modal-body {
+  padding: 20px;
+}
+
+.custom-section {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: var(--color-primary);
+  border-radius: 2vw;
+  text-align: justify;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+.custom-section h2 {
+  font-size: 30px;
+}
+
+.custom-section p {
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+
+  .modal .title h1:nth-child(2) {
+    font-size: calc(1.3rem + .6vw) !important;
+  }
+
+  .custom-section div {
+    padding-top: 1.2rem !important;
+  }
+
+  .custom-section h2 {
+    font-size: 20px;
+  }
+
+  .custom-section i {
+    font-size: 20px !important;
+  }
+
+  .custom-section p {
+    font-size: 0.9rem !important;
+  }
+}
+
 
 /* box */
 
@@ -699,7 +765,7 @@ body {
 /* Responsividad */
 @media only screen and (max-width: 480px) {
   #box .boxValues h3 {
-    font-size: 6vw;
+    font-size: 5vw;
   }
 
   #box .boxValues .icon {
