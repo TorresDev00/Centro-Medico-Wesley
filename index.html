@@ -77,7 +77,8 @@
                             <div class="vr d-none d-lg-flex h-75 mx-lg-2 text-white"></div>
                             <hr class="d-lg-none my-2 text-white-25">
                         </li>
-                        <button id="theme-toggle" class="btn btn-link nav-link py-2 px-0 px-lg-2 d-flex align-items-center">
+                        <button id="theme-toggle"
+                            class="btn btn-link nav-link py-2 px-0 px-lg-2 d-flex align-items-center">
                             <i id="theme-icon" class="bi bi-sun-fill my-1"></i>
                             <span class="d-lg-none ms-2" id="theme-text">Light</span>
                         </button>
@@ -87,7 +88,7 @@
         </div>
     </nav>
     <header id="header">
-        <section>
+        <section class="container">
             <div class="row">
                 <div id="title_1" class="col-12">
                     <h1 class="text-center">BIENVENIDOS</h1>
@@ -100,7 +101,7 @@
     </header>
     <main id="main">
 
-        <section id="valores" class="pt-5 ps-lg-2">
+        <section id="valores" class="pt-5 container">
             <div class="p-lg-5 ps-3">
                 <h2 class="text-start text-1">Nuestros valores</h2>
                 <h2 class="text-start text-1">nos impulsan</h2>
@@ -109,36 +110,33 @@
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-4 pt-4">
                         <div class="boxValues respect text-center">
-                            <dotlottie-player class="icono_1"
-                                src="assets/js/animaciones/respetoAnimado.json"
+                            <dotlottie-player class="icono_1" src="assets/js/animaciones/respetoAnimado.json"
                                 background="transparent" speed="1" style="width: 280px; height: 280px;" loop>
                             </dotlottie-player>
-                            <h3 class="title">Respeto</h3>
+                            <h3 class="title fs-2">Respeto</h3>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4 pt-4">
                         <div class="boxValues responsibility text-center">
-                            <dotlottie-player class="icono_2"
-                                src="assets/js/animaciones/responsabilidadAnimado.json"
+                            <dotlottie-player class="icono_2" src="assets/js/animaciones/responsabilidadAnimado.json"
                                 background="transparent" speed="1" style="width: 300px; height: 300px;" loop>
                             </dotlottie-player>
-                            <h3 class="title">Responsabilidad</h3>
+                            <h3 class="title fs-2">Responsabilidad</h3>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4 pt-4">
                         <div class="boxValues love text-center">
-                            <dotlottie-player class="icono_3"
-                                src="assets/js/animaciones/corazonAnimada.json"
+                            <dotlottie-player class="icono_3" src="assets/js/animaciones/corazonAnimada.json"
                                 background="transparent" speed="1" style="width: 520px; height: 520px;" loop>
                             </dotlottie-player>
-                            <h3 class="title">Amor</h3>
+                            <h3 class="title fs-2">Amor</h3>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="eslogan text-center">
+        <div class="container eslogan text-center">
             <h1>
                 <span class="highlight">¡JUNTOS, PODEMOS CONSTRUIR UNA COMUNIDAD</span>
                 <span class="highlight_2">SALUDABLE Y PLENA!</span>
@@ -146,7 +144,7 @@
         </div>
 
 
-        <section id="testimonios" class="my-5 mx-2">
+        <section id="testimonios" class="my-5 container">
             <div class="imgTest">
                 <img src="assets/img/medico_1.png" alt="medico" class="medico-img">
             </div>
@@ -164,7 +162,8 @@
                                 resultados a través de
                                 una atención de
                                 excelencia.</p>
-                            <a href="index.html"><i class="bi bi-plus-circle-fill"></i></a>
+                            <button class="btn btnPlus" data-bs-toggle="modal" data-bs-target="#modalTestimonios"><i
+                                    class="plus"></i></button>
                         </div>
                     </section>
                 </div>
@@ -271,6 +270,34 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal fade" id="modalTestimonios" tabindex="-1" aria-labelledby="modalTestimonios" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header no-border-bottom d-flex align-items-center mx-3">
+                    <div class="mt-5 title w-100">
+                    </div>
+                    <button type="button" class="btn btn-light text-dark rounded-circle " data-bs-dismiss="modal" aria-label="Close"><i
+                            class="bi bi-x-lg"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="custom-section">
+
+                        <div class="px-4 pt-5">
+                            <h2><i class="bi bi-check-circle-fill px-1 fs-3"></i> Descripción</h2>
+                            <p class="fs-5">Este curso reseña la forma de Adoración transformacional, guiando al
+                                adorador a acciones
+                                requeridas como epicentro de su ministerio y del culto en la iglesia. La adoración se
+                                establece como el
+                                centro de lo que hacemos y cómo existimos determinando la eficacia de la misión de la
+                                iglesia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>

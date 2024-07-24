@@ -88,6 +88,7 @@ body {
 
 /* Navbar */
 
+/* Navbar */
 #navbar {
   background: var(--bs-primary);
   font-family: sans-serif;
@@ -96,17 +97,18 @@ body {
 #navbar li a {
   font-size: 18px;
   color: var(--color-text-light);
+  transition: color 0.5s ease, background-color 0.3s ease;
 }
 
 .navbar-toggler:hover,
 .nav-link:hover,
 .nav-link:focus {
   color: var(--bs-third) !important;
-  transition: color 0.5s ease;
 }
 
 .navbar-toggler {
   border: none;
+  padding: 8px;
 }
 
 .navbar-toggler:focus {
@@ -117,6 +119,7 @@ body {
 
 #mobileMenu {
   background: var(--bs-primary);
+  color: var(--color-text-light);
 }
 
 #theme-toggle {
@@ -128,7 +131,7 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-#theme-text{
+#theme-text {
   color: var(--color-text-light);
 }
 
@@ -138,13 +141,13 @@ body {
 
 #citaNow {
   background-color: var(--color-secondary);
-  padding: 1px;
-  margin-top: 8px;
+  border-radius: 5px;
 }
 
 #citaNow:hover {
   background-color: var(--color-background-light);
 }
+
 
 /* Header */
 
@@ -200,9 +203,9 @@ body {
 }
 
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 992px) and (max-width: 1499.98px) {
   #header #title_1 h1 {
-    font-size: 6rem;
+    font-size: 8rem;
   }
 
   #header #title_2 h1 {
@@ -211,7 +214,7 @@ body {
 }
 
 
-@media (min-width: 1200px) and (max-width: 1919.98px) {
+@media (min-width: 1500px) and (max-width: 1919.98px) {
   #header #title_1 h1 {
     font-size: 10rem;
   }
@@ -312,7 +315,7 @@ body {
 #valores .boxValues {
   padding: 30px;
   width: 100%;
-  height: 50vh;
+  height: 25vh;
   padding-bottom: 100%;
   background: var(--bs-body-bg);
   box-shadow: 10px 8px 30px rgba(0, 0, 0, 0.15) ;
@@ -337,7 +340,7 @@ body {
   /* Ajusta el espaciado entre el icono y el texto */
 }
 
-/* Responsividad de las fuentes */
+/* Responsividad de las fuentes
 @media only screen and (max-width: 480px) {
   #valores .boxValues h3 {
     font-size: 9vw;
@@ -372,7 +375,7 @@ body {
   #valores .boxValues h3 {
     font-size: 3vw;
   }
-}
+} */
 
 /* @media de icono animado */
 /* Tamaño para pantallas muy pequeñas */
@@ -435,18 +438,18 @@ body {
 /* Tamaño para pantallas grandes */
 @media (min-width: 992px) {
   .icono_1 {
-    width: 230px !important;
-    height: 230px !important;
+    width: 210px !important;
+    height: 210px !important;
   }
 
   .icono_2 {
-    width: 230px !important;
-    height: 230px !important;
+    width: 210px !important;
+    height: 210px !important;
   }
 
   .icono_3 {
-    width: 400px !important;
-    height: 400px !important;
+    width: 380px !important;
+    height: 380px !important;
   }
 
 }
@@ -454,18 +457,18 @@ body {
 /* Tamaño para pantallas extra grandes */
 @media (min-width: 1200px) {
   .icono_1 {
-    width: 280px !important;
-    height: 280px !important;
+    width: 260px !important;
+    height: 260px !important;
   }
 
   .icono_2 {
-    width: 300px !important;
-    height: 300px !important;
+    width: 260px !important;
+    height: 260px !important;
   }
 
   .icono_3 {
-    width: 520px !important;
-    height: 520px !important;
+    width: 460px !important;
+    height: 460px !important;
   }
 }
 
@@ -625,6 +628,110 @@ body {
   }
 }
 
+.btnPlus {
+  margin-top: 20px;
+  align-self: center;
+  border-radius: 50%;
+  background: var(--color-secondary);
+}
+
+.btnPlus:hover {
+  background: rgb(0, 139, 128) !important;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btnPlus:not(:hover) {
+  cursor: default;
+}
+
+.btnPlus:active,
+.btnPlus:focus {
+  background: rgb(0, 139, 128);
+  /* Cambia ligeramente el color de fondo al seleccionar el botón */
+  color: #ffffff;
+}
+
+.plus {
+  background-image: url(../img/iconos/plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px auto !important
+}
+
+/* Modal */
+
+body.modal-open {
+  padding-right: 15px; /* Ajusta este valor según el ancho de la barra de desplazamiento */
+}
+
+
+.no-border-bottom {
+  border-bottom: none !important;
+}
+
+.modal-content{
+  background-color: var(--bs-color-section) !important;
+}
+
+
+.modal-body {
+  padding: 20px;
+}
+
+.custom-section {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: var(--color-primary);
+  border-radius: 2vw;
+  text-align: justify;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+.custom-section h2 {
+  font-size: 30px;
+}
+
+.custom-section p {
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+
+  .modal .title h1:nth-child(2) {
+    font-size: calc(1.3rem + .6vw) !important;
+  }
+
+  .custom-section div {
+    padding-top: 1.2rem !important;
+  }
+
+  .custom-section h2 {
+    font-size: 20px;
+  }
+
+  .custom-section i {
+    font-size: 20px !important;
+  }
+
+  .custom-section p {
+    font-size: 0.9rem !important;
+  }
+}
+
+
 /* box */
 
 #box {
@@ -658,7 +765,7 @@ body {
 /* Responsividad */
 @media only screen and (max-width: 480px) {
   #box .boxValues h3 {
-    font-size: 6vw;
+    font-size: 5vw;
   }
 
   #box .boxValues .icon {
