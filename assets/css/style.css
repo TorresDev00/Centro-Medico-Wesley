@@ -34,10 +34,15 @@
   --color-backgraund-grey: rgb(234, 234, 234);
   --color-black: #000;
   --color-yellow: #fbff00;
+  --color-modal: #69caa699;
   --gradient-multicolor-dark: linear-gradient(90deg,  rgb(0, 255, 0), rgb(0, 255, 255), rgb(0, 128, 255),rgb(255, 0, 255),rgb(255, 0, 128), rgb(255, 255, 0) );
   --gradient-multicolor-light: linear-gradient(90deg, rgb(139 190 0), rgb(136 150 255), rgb(63 190 238), rgb(158 139 255), rgb(136 150 255), rgb(255, 121, 91));
   --gradient-multicolor-2-light: linear-gradient(90deg, rgb(158 139 255),rgb(63 190 238) ,rgb(136 150 255), rgb(16 76 137));
   --gradient-multicolor-2-dark: linear-gradient(90deg, rgb(120, 0, 255), rgb(0 231 231), rgb(180 0 255), rgb(0 6 255));     
+  --shadow-color-black: rgba(0, 0, 0, 0.15);
+  --shadow-color-light: rgba(255, 255, 255, 0.15);
+  --shadow-hover-dark: rgba(0, 0, 0, 0.12);
+  --shadow-hover-light: rgba(255, 255, 255, 0.12);
 }
 
 :root[data-bs-theme="light"] {
@@ -54,6 +59,9 @@
   --bs-bg: var(--color-backgraund-grey);
   --gradient-multicolor: var(--gradient-multicolor-light);
   --gradient-multicolor-2: var(--gradient-multicolor-2-light);
+  --bg-color-modal: var(--color-modal);
+  --bg-shadow: var(--shadow-color-black);
+  --bg-shadow-hover: var(--shadow-hover-dark);
 }
 
 :root[data-bs-theme="dark"] {
@@ -70,6 +78,9 @@
   --bs-bg: var(--color-background-dark);
   --gradient-multicolor: var(--gradient-multicolor-dark);
   --gradient-multicolor-2: var(--gradient-multicolor-2-dark);
+  --bg-color-modal: var(--color-background-dark);
+  --bg-shadow: var(--shadow-color-light);
+  --bg-shadow-hover: var(--shadow-hover-light);
 }
 
 body,
@@ -318,7 +329,7 @@ body {
   height: 25vh;
   padding-bottom: 100%;
   background: var(--bs-body-bg);
-  box-shadow: 10px 8px 30px rgba(0, 0, 0, 0.15) ;
+  box-shadow: 10px 8px 30px  var(--bg-shadow);
   transition: all 0.3s ease-in-out;
   border-radius: 3vw;
   position: relative;
@@ -328,7 +339,7 @@ body {
 }
 
 #valores .boxValues:hover {
-  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.12) ;
+  box-shadow: 10px 10px 10px 10px var(--bg-shadow-hover);
   transform: translateY(-5px);
 }
 
@@ -420,18 +431,18 @@ body {
 /* Tamaño para pantallas medianas */
 @media (min-width: 768px) {
   .icono_1 {
-    width: 320px !important;
-    height: 320px !important;
+    width: 230px  !important;
+    height: 230px  !important;
   }
 
   .icono_2 {
-    width: 320px !important;
-    height: 320px !important;
+    width: 235px !important;
+    height: 235px !important;
   }
 
   .icono_3 {
-    width: 550px !important;
-    height: 550px !important;
+    width: 410px !important;
+    height: 410px !important;
   }
 }
 
@@ -481,7 +492,7 @@ body {
 }
 
 .eslogan span {
-  font-size: 4.5vw;
+  font-size: 3.5vw;
   font-weight: bold;
   line-height: 1.2;
   background: var( --gradient-multicolor);
@@ -489,11 +500,23 @@ body {
   color: transparent;
 }
 
+
 .eslogan .highlight_2 {
   color: var(--color-text-light);
   background: var(--gradient-multicolor-2) ;
 }
 
+@media (max-width: 425px) {
+  .eslogan span {
+    font-size: 8vw;
+  }
+}
+
+@media (min-width: 2000px) {
+  .eslogan span {
+    font-size: 2vw;
+  }
+}
 /* Testiminios */
 
 #testimonios {
@@ -504,12 +527,7 @@ body {
 }
 
 .medico-img {
-  width: 40%;
-  height: 90vh;
-  position: absolute;
-  left: 0;
-  top: 10px;
-  z-index: 3;
+  width: 100%;
 }
 
 #testimonios h3 {
@@ -519,21 +537,7 @@ body {
   z-index: 2;
 }
 
-#testimonios .info p {
-  font-size: 2vw;
-}
 
-#testimonios .p1 {
-  padding-left: 20vw;
-}
-
-#testimonios .p2 {
-  padding-left: 20vw;
-}
-
-#testimonios .p3 {
-  padding-left: 30vw;
-}
 
 #testimonios .test-align {
   display: grid;
@@ -555,27 +559,15 @@ body {
   font-size: 50px;
 }
 
-#testimonios .imgTest {
-  position: relative;
-  margin: 10px;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+#testimonios .info p {
+  margin-top: 40px;
 }
 
-@media (max-width: 1200px) {
-
-  #testimonios .info p {
-    font-size: 2vw;
-  }
-}
 
 @media (max-width: 1028px) {
 
   .medico-img {
-    width: 30%;
-    height: 55vh;
+    width: 100%;
   }
 }
 
@@ -587,8 +579,7 @@ body {
   }
 
   .medico-img {
-    width: 40%;
-    height: 30vh;
+    width: 100%;
   }
 
   #testimonios .info a i {
@@ -617,19 +608,18 @@ body {
 
   #testimonios .info p {
     text-align: center;
-    font-size: 0.9rem;
   }
 }
 
 @media only screen and (max-width: 380px) {
   #testimonios .info p {
     text-align: center;
-    font-size: 0.8rem;
+    margin-top: 40px;
   }
 }
 
 .btnPlus {
-  margin-top: 20px;
+  margin: 20px 0;
   align-self: center;
   border-radius: 50%;
   background: var(--color-secondary);
@@ -692,7 +682,7 @@ body.modal-open {
   align-items: center;
   justify-content: center;
   padding: 0;
-  background-color: var(--color-primary);
+  background-color: var(--bg-color-modal);
   border-radius: 2vw;
   text-align: justify;
   width: 100%;
@@ -749,7 +739,6 @@ body.modal-open {
 #box .boxValues h3 {
   font-family: "monserrat-BlackItalic";
   color: var(--color-text-dark);
-  font-size: 2vw;
 }
 
 #box .boxValues .icon {
@@ -764,9 +753,6 @@ body.modal-open {
 
 /* Responsividad */
 @media only screen and (max-width: 480px) {
-  #box .boxValues h3 {
-    font-size: 5vw;
-  }
 
   #box .boxValues .icon {
     font-size: 3rem;
@@ -774,9 +760,6 @@ body.modal-open {
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  #box .boxValues h3 {
-    font-size: 4.5vw;
-  }
 
   #box .boxValues .icon {
     font-size: 3.5rem;
@@ -784,9 +767,6 @@ body.modal-open {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  #box .boxValues h3 {
-    font-size: 3vw;
-  }
 
   #box .boxValues .icon {
     font-size: 3.75rem;
@@ -794,9 +774,6 @@ body.modal-open {
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  #box .boxValues h3 {
-    font-size: 2.5vw;
-  }
 
   #box .boxValues .icon {
     font-size: 4rem;
@@ -804,10 +781,6 @@ body.modal-open {
 }
 
 @media only screen and (min-width: 1441px) {
-  #box .boxValues h3 {
-    font-size: 2vw;
-  }
-
   #box .boxValues .icon {
     font-size: 4rem;
   }
@@ -877,7 +850,10 @@ body.modal-open {
 
 @media only screen and (max-width: 480px) {
   .swiper-pagination {
-    width: 50% !important;
+    width: 35% !important;
+  }
+  .servicios .icon-box-full {
+    height: 35vh;
   }
 }
 
@@ -885,11 +861,17 @@ body.modal-open {
   .swiper-pagination {
     width: 40% !important;
   }
+  .servicios .icon-box-full {
+    height: 40vh;
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .swiper-pagination {
     width: 30% !important;
+  }
+  .servicios .icon-box-full {
+    height: 40vh;
   }
 }
 
@@ -897,11 +879,17 @@ body.modal-open {
   .swiper-pagination {
     width: 20% !important;
   }
+  .servicios .icon-box-full {
+    height: 50vh;
+  }
 }
 
 @media only screen and (min-width: 1441px) {
   .swiper-pagination {
     width: 20% !important;
+  }
+  .servicios .icon-box-full {
+    height: 60vh;
   }
 }
 

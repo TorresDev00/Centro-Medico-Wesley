@@ -462,12 +462,11 @@ Circulo
 
 .pillar p {
   margin: 0;
-  font-size: 2vw;
 }
 
 /* Pillar positions */
 .pillar-quality {
-  top: 6%;
+  top: 9%;
   left: 11%;
   transform: translateX(-50%);
 }
@@ -502,7 +501,6 @@ Circulo
   text-align: center;
   width: 70%;
   color: var(--color-background-dark);
-  font-size: 3vw;
   font-weight: bold;
   top: 50%;
   left: 50%;
@@ -521,81 +519,155 @@ Circulo
 /* Media queries */
 
 
-@media (min-width: 1800px) {
-  .container-circle {
-    max-width: 900px;
-    width: 60vw;
-  }
-
-  .pillar .img {
-    max-width: 120px;
-  }
-
-  .pillar p {
-    font-size: 1.5vw;
-  }
-
-  .center-text {
-    font-size: 2vw;
-  }
+/* Estilos generales para los pilares */
+.pillar {
+  position: absolute; /* Asegúrate de que los pilares se posicionen correctamente */
+  text-align: center;
 }
 
+/* Media Queries */
+
+/* Pantallas muy grandes (3000px y más) */
 @media (min-width: 3000px) {
   .container-circle {
     max-width: 1000px;
     width: 50vw;
   }
 
-  .pillar .img {
-    max-width: 180px;
+  .iconoPilar_1{
+    max-width: 140px;
   }
 
-  .pillar p {
-    font-size: 1.2vw;
+  .iconoPilar_2,
+  .iconoPilar_3,
+  .iconoPilar_4,
+  .iconoPilar_5 {
+    max-width: 160px;
   }
 
-  .center-text {
-    font-size: 1.5vw;
+
+}
+
+/* Pantallas grandes (1800px a 3000px) */
+@media (min-width: 1800px) and (max-width: 2999px) {
+  .container-circle {
+    max-width: 900px;
+    width: 60vw;
+  }
+
+  .iconoPilar_1{
+    max-width: 80px;
+  }
+
+  .iconoPilar_2,
+  .iconoPilar_3,
+  .iconoPilar_4,
+  .iconoPilar_5 {
+    max-width: 100px;
+  }
+
+}
+
+
+@media (min-width: 1400px) and (max-width: 1799px) {
+ 
+  .iconoPilar_1{
+    width: 3vw;
+  }
+
+  .iconoPilar_2,
+  .iconoPilar_3,
+  .iconoPilar_4,
+  .iconoPilar_5 {
+    width: 4vw; /* Ajusta según sea necesario */
+  }
+
+  .pillar-quality {
+    top: 5%;
+    left: 10%;
+  }
+
+  .pillar-equality {
+    top: 17%;
+    right: -10%;
+  }
+
+  .pillar-efficacy {
+    bottom: 20%;
+    left: 5%;
+  }
+
+  .pillar-integrity {
+    top: 69%;
+    left: 80%;
+  }
+
+  .pillar-humanized-service {
+    top: 95%;
   }
 }
 
+/* Pantallas medianas (1024px a 1500px) */
+@media (min-width: 1024px) and (max-width: 1399px) {
+ 
+  .iconoPilar_1{
+    width: 6vw;
+  }
+
+  .iconoPilar_2,
+  .iconoPilar_3,
+  .iconoPilar_4,
+  .iconoPilar_5 {
+    width: 8vw; /* Ajusta según sea necesario */
+  }
+}
+
+/* Pantallas medianas (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .iconoPilar_1,
+  .iconoPilar_2,
+  .iconoPilar_3,
+  .iconoPilar_4,
+  .iconoPilar_5 {
+    width: 6vw; /* Ajusta según sea necesario */
+  }
+}
+
+/* Pantallas pequeñas (menos de 768px) */
 @media (max-width: 768px) {
   .container-circle {
     width: 95vw;
   }
 
-  .pillar .img {
+  .iconoPilar_1,
+  .iconoPilar_2,
+  .iconoPilar_3,
+  .iconoPilar_4,
+  .iconoPilar_5 {
     width: 12vw;
   }
 
-  .pillar p {
-    font-size: 2.5vw;
-  }
-
   .center-text {
-    font-size: 3.5vw;
     width: 80%;
   }
 }
 
+/* Pantallas extra pequeñas (menos de 576px) */
 @media (max-width: 576px) {
   .container-circle {
     width: 100vw;
   }
 
-  .pillar .img {
+  .iconoPilar_1,
+  .iconoPilar_2,
+  .iconoPilar_3,
+  .iconoPilar_4,
+  .iconoPilar_5 {
     width: 10vw;
   }
 
-  .pillar p {
-    font-size: 3vw;
-  }
 
-  .center-text {
-    font-size: 4vw;
-    width: 90%;
-  }
-
+  /* Ajustes de posición para pantallas pequeñas */
   .pillar-quality {
     top: 5%;
     left: 10%;
@@ -621,9 +693,10 @@ Circulo
   }
 }
 
+/* Pantallas muy pequeñas (200px a 480px) */
 @media (min-width: 200px) and (max-width: 480px) {
   .pillar-quality {
-    top: -1%;
+    top: 3%;
     left: 15%;
   }
 
@@ -638,10 +711,24 @@ Circulo
   }
 
   .pillar-integrity {
-    top: 65%;
-    left: 75%;
+    top: 67%;
+    left: 77%;
   }
+
+  .iconoPilar_1{
+    width: 10vw;
+  }
+  
+  .iconoPilar_2,
+  .iconoPilar_3,
+  .iconoPilar_4,
+  .iconoPilar_5 {
+    width: 14vw;
+  }
+
 }
+
+
 
 /***************************************
  ----------Contactanos -----------------

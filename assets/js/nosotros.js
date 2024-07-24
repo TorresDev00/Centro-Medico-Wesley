@@ -182,20 +182,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const typingSpeed = 100; // Velocidad de escritura
     const delayBetweenChats = 1000; // Espera entre chats
     const delayAfterErase = 2000; // Espera después de borrar
-
+    
     function typeChat() {
         if (currentChat < chats.length) {
             const currentElement = chats[currentChat];
             currentElement.style.display = 'block'; // Mostrar el h2 actual
-
+    
             if (currentChar === 0) {
                 currentElement.textContent = ''; // Limpiar el texto al inicio
             }
-
+    
             const text = currentElement.getAttribute('data-text') || currentElement.textContent;
-
-            if (currentChar < text.length) {
-                currentElement.textContent += text[currentChar];
+            const chars = Array.from(text); // Convierte el texto a una array de caracteres
+    
+            if (currentChar < chars.length) {
+                const nextChar = chars[currentChar];
+                currentElement.textContent += nextChar;
                 currentChar++;
                 setTimeout(typeChat, typingSpeed);
             } else {
@@ -207,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(eraseAllChats, delayAfterErase);
         }
     }
-
+    
     function eraseAllChats() {
         chats.forEach(chat => {
             chat.style.display = 'none';
@@ -216,14 +218,16 @@ document.addEventListener("DOMContentLoaded", function () {
         currentChat = 0;
         setTimeout(typeChat, delayBetweenChats);
     }
-
+    
     // Guardar el texto original en un atributo data-text
     chats.forEach(chat => {
         if (!chat.getAttribute('data-text')) {
             chat.setAttribute('data-text', chat.textContent);
         }
     });
-
+    
     typeChat();
-
+    
+    
+    
 })
