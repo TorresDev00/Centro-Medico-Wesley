@@ -462,6 +462,7 @@ Circulo
 
 .pillar p {
   margin: 0;
+  font-size: 10px;
 }
 
 /* Pillar positions */
@@ -545,6 +546,10 @@ Circulo
     max-width: 160px;
   }
 
+  .pillar p {
+    font-size: 60px;
+  }
+
 
 }
 
@@ -566,6 +571,11 @@ Circulo
     max-width: 100px;
   }
 
+  .pillar p {
+    font-size: 30px;
+  }
+
+
 }
 
 
@@ -581,6 +591,11 @@ Circulo
   .iconoPilar_5 {
     width: 4vw; /* Ajusta según sea necesario */
   }
+
+  .pillar p {
+    font-size: 30px;
+  }
+
 
   .pillar-quality {
     top: 5%;
@@ -620,6 +635,11 @@ Circulo
   .iconoPilar_5 {
     width: 8vw; /* Ajusta según sea necesario */
   }
+
+  .pillar p {
+    font-size: 30px;
+  }
+  
 }
 
 /* Pantallas medianas (768px a 1024px) */
@@ -631,6 +651,10 @@ Circulo
   .iconoPilar_5 {
     width: 6vw; /* Ajusta según sea necesario */
   }
+
+  .pillar p {
+    font-size: 21px;
+  }
 }
 
 /* Pantallas pequeñas (menos de 768px) */
@@ -639,7 +663,10 @@ Circulo
     width: 95vw;
   }
 
-  .iconoPilar_1,
+  .iconoPilar_1{
+    width: 9vw;
+  }
+
   .iconoPilar_2,
   .iconoPilar_3,
   .iconoPilar_4,
@@ -649,6 +676,30 @@ Circulo
 
   .center-text {
     width: 80%;
+  }
+
+  .pillar-quality {
+    top: 5%;
+    left: 12%;
+  }
+
+  .pillar-equality {
+    top: 15%;
+    right: 1%;
+  }
+
+  .pillar-efficacy {
+    bottom: 20%;
+    left: 5%;
+  }
+
+  .pillar-integrity {
+    top: 69%;
+    left: 78%;
+  }
+
+  .pillar-humanized-service {
+    top: 95%;
   }
 }
 
@@ -664,6 +715,10 @@ Circulo
   .iconoPilar_4,
   .iconoPilar_5 {
     width: 10vw;
+  }
+
+  .pillar p {
+    font-size: 30px;
   }
 
 
@@ -724,6 +779,14 @@ Circulo
   .iconoPilar_4,
   .iconoPilar_5 {
     width: 14vw;
+  }
+
+  .pillar p {
+    font-size: 9px;
+  }
+
+  .center-text{
+    font-size: 20px !important;
   }
 
 }

@@ -16,7 +16,7 @@ Navbar
 }
 
 #navbar li a {
- color: var(--bs-body-color-text);
+    color: var(--bs-body-color-text);
 }
 
 #mobileMenu {
@@ -29,11 +29,11 @@ Navbar
     color: var(--color-third) !important;
 }
 
-.offcanvas-title{
+.offcanvas-title {
     color: var(--bs-body-color-text);
 }
 
-.vr{
+.vr {
     color: var(--bs-body-color-text);
 }
 
@@ -51,11 +51,11 @@ Navbar
 
 #theme-icon {
     color: var(--bs-body-color-text);
-  }
-  
-  #theme-text{
+}
+
+#theme-text {
     color: var(--bs-body-color-text);
-  }
+}
 
 
 
@@ -73,13 +73,49 @@ main {
   Servicios
 ****************************************/
 
-#servicio .text-1{
+.service {
+    display: none;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.tituloStart {
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease; /* Transición suave */
+}
+
+.tituloStart.visible {
+    opacity: 1; /* Visible */
+}
+
+
+.service.visible {
+    /* Ajusta según el contenido máximo */
+    opacity: 1;
+    display: block;
+}
+
+#servicio .text-1 {
     color: var(--bs-body-color-text);
-    font-size: calc(3vw + 1rem);
+    font-size: 3vw;
+}
+
+.map-container {
+    position: relative;
+    display: inline-block;
+}
+
+.location-icon {
+    position: absolute;
+    color: red;
+    font-size: 2rem;
+    /* Puedes ajustar el tamaño según necesites */
+    transform: translate(-50%, -100%);
+    cursor: pointer;
 }
 
 #servicio .text-1 .text-darkCyan,
-#servicio .title .text-darkCyan{
+#servicio .title .text-darkCyan {
     color: var(--color-primary);
 }
 
@@ -107,24 +143,27 @@ main {
     font-weight: bold;
     color: var(--bs-body-color-text);
 }
+
 @media (min-width: 576px) {
     .boxService .title {
         font-size: 1.5rem;
     }
 }
+
 @media (min-width: 768px) {
     .boxService .title {
         font-size: 1.75rem;
     }
 }
+
 @media (min-width: 1200px) {
     .boxService .title {
         font-size: 2rem;
     }
 }
+
 @media (min-width: 1600px) {
     .boxService .title {
-        font-size: 4.25rem;
+        font-size: 2rem;
     }
 }
-
