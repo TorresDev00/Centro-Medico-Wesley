@@ -467,8 +467,8 @@ Circulo
 
 /* Pillar positions */
 .pillar-quality {
-  top: 10%;
-  left: 8%;
+  top: 6%;
+  left: 11%;
   transform: translateX(-50%);
 }
 
@@ -527,7 +527,7 @@ Circulo
     width: 60vw;
   }
 
-  .pillar img {
+  .pillar .img {
     max-width: 120px;
   }
 
@@ -546,7 +546,7 @@ Circulo
     width: 50vw;
   }
 
-  .pillar img {
+  .pillar .img {
     max-width: 180px;
   }
 
@@ -564,7 +564,7 @@ Circulo
     width: 95vw;
   }
 
-  .pillar img {
+  .pillar .img {
     width: 12vw;
   }
 
@@ -583,7 +583,7 @@ Circulo
     width: 100vw;
   }
 
-  .pillar img {
+  .pillar .img {
     width: 10vw;
   }
 

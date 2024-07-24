@@ -88,6 +88,7 @@ body {
 
 /* Navbar */
 
+/* Navbar */
 #navbar {
   background: var(--bs-primary);
   font-family: sans-serif;
@@ -96,17 +97,18 @@ body {
 #navbar li a {
   font-size: 18px;
   color: var(--color-text-light);
+  transition: color 0.5s ease, background-color 0.3s ease;
 }
 
 .navbar-toggler:hover,
 .nav-link:hover,
 .nav-link:focus {
   color: var(--bs-third) !important;
-  transition: color 0.5s ease;
 }
 
 .navbar-toggler {
   border: none;
+  padding: 8px;
 }
 
 .navbar-toggler:focus {
@@ -117,6 +119,7 @@ body {
 
 #mobileMenu {
   background: var(--bs-primary);
+  color: var(--color-text-light);
 }
 
 #theme-toggle {
@@ -128,7 +131,7 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-#theme-text{
+#theme-text {
   color: var(--color-text-light);
 }
 
@@ -138,13 +141,13 @@ body {
 
 #citaNow {
   background-color: var(--color-secondary);
-  padding: 1px;
-  margin-top: 8px;
+  border-radius: 5px;
 }
 
 #citaNow:hover {
   background-color: var(--color-background-light);
 }
+
 
 /* Header */
 
@@ -200,9 +203,9 @@ body {
 }
 
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 992px) and (max-width: 1499.98px) {
   #header #title_1 h1 {
-    font-size: 6rem;
+    font-size: 8rem;
   }
 
   #header #title_2 h1 {
@@ -211,7 +214,7 @@ body {
 }
 
 
-@media (min-width: 1200px) and (max-width: 1919.98px) {
+@media (min-width: 1500px) and (max-width: 1919.98px) {
   #header #title_1 h1 {
     font-size: 10rem;
   }
@@ -624,6 +627,44 @@ body {
     font-size: 0.8rem;
   }
 }
+
+.btnPlus {
+  margin-top: 20px;
+  align-self: center;
+  border-radius: 50%;
+  background: var(--color-secondary);
+}
+
+.btnPlus:hover {
+  background: rgb(0, 139, 128) !important;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btnPlus:not(:hover) {
+  cursor: default;
+}
+
+.btnPlus:active,
+.btnPlus:focus {
+  background: rgb(0, 139, 128);
+  /* Cambia ligeramente el color de fondo al seleccionar el botón */
+  color: #ffffff;
+}
+
+.plus {
+  background-image: url(../img/iconos/plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px auto !important
+}
+
 
 /* box */
 

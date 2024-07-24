@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         slidesPerView: 'auto',
         centeredSlides: true,
+        spaceBetween: 40, // Añadir esta línea
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -53,21 +54,23 @@ document.addEventListener("DOMContentLoaded", function () {
         breakpoints: {
             320: {
                 slidesPerView: 1,
+                spaceBetween: 40 // Asegurarse de tener esto aquí también
             },
             768: {
                 slidesPerView: 1,
+                spaceBetween: 40 // Ajustar espacio entre diapositivas
             },
             1024: {
                 slidesPerView: 1,
+                spaceBetween: 40 // Ajustar espacio entre diapositivas
             },
             1200: {
                 slidesPerView: 1,
                 centeredSlides: true,
-                spaceBetween: 40
+                spaceBetween: 40 // Ajustar espacio entre diapositivas
             }
         }
     });
-
 
     let boxRespect = document.querySelector('.respect');
     let lottiePlayer_1 = document.querySelector('.icono_1');
