@@ -390,6 +390,23 @@ body {
 
 /* @media de icono animado */
 /* Tamaño para pantallas muy pequeñas */
+@media (min-width: 210px) {
+  .icono_1 {
+    width: 160px !important;
+    height: 160px !important;
+  }
+
+  .icono_2 {
+    width: 160px !important;
+    height: 160px !important;
+  }
+
+  .icono_3 {
+    width: 275px !important;
+    height: 275px !important;
+  }
+}
+
 @media (min-width: 280px) {
   .icono_1 {
     width: 200px !important;
