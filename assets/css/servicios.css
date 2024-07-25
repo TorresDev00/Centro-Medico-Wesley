@@ -73,21 +73,22 @@ main {
   Servicios
 ****************************************/
 
+
 .service {
     display: none;
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
-.tituloStart {
+#tituloStart {
     opacity: 0; /* Inicialmente invisible */
     transition: opacity 0.5s ease; /* Transición suave */
 }
 
-.tituloStart.visible {
+#tituloStart.visible {
     opacity: 1; /* Visible */
+    background-color: var(--bs-body-absolute2);
 }
-
 
 .service.visible {
     /* Ajusta según el contenido máximo */

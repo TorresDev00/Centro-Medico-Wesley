@@ -41,15 +41,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const infoSedes = {
     sede_1: {
       nombre: 'Cabudare',
-      direccion: 'C. Altamira, Cabudare 3023, Lara'
+      direccion: 'C. Altamira, Cabudare 3023, Lara',
+      maps: '<iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491.13823052044654!2d-69.22253736994304!3d10.008115351027937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875f722e50bdc7%3A0x68fa4d525677f0bb!2sSeminario%20Wesleyano%20de%20Venezuela!5e0!3m2!1ses-419!2sve!4v1721919468022!5m2!1ses-419!2sve" style="border:0; width: 100%; height: 384px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     sede_2: {
       nombre: 'Sede 2',
-      direccion: 'Dirección Sede 2'
+      direccion: 'Sede 2',
+      maps: '<iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491.13823052044654!2d-69.22253736994304!3d10.008115351027937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875f722e50bdc7%3A0x68fa4d525677f0bb!2sSeminario%20Wesleyano%20de%20Venezuela!5e0!3m2!1ses-419!2sve!4v1721919468022!5m2!1ses-419!2sve" style="border:0; width: 100%; height: 384px;"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     sede_3: {
       nombre: 'Sede 3',
-      direccion: 'Dirección Sede 3'
+      direccion: 'Sede 3',
+      maps: '<iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491.13823052044654!2d-69.22253736994304!3d10.008115351027937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875f722e50bdc7%3A0x68fa4d525677f0bb!2sSeminario%20Wesleyano%20de%20Venezuela!5e0!3m2!1ses-419!2sve!4v1721919468022!5m2!1ses-419!2sve" style="border:0; width: 100%; height: 384px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     }
     // Añade más según sea necesario
   };
@@ -68,11 +71,13 @@ document.addEventListener("DOMContentLoaded", function () {
       // Actualizamos el nombre y la dirección de la sede
       const sedeNombre = document.getElementById('sedeNombre');
       const sedeDireccion = document.getElementById('sedeDireccion');
+      const sedeMaps = document.getElementById('maps');
       const info = infoSedes[sedeSeleccionada] || {};
 
       sedeNombre.innerHTML = `Sede <strong class="text-darkCyan">${info.nombre}</strong>`;
-      sedeDireccion.innerHTML = `Dirección: <strong class="text-darkCyan">${info.direccion}</strong>`;
-
+      sedeDireccion.innerHTML = ` <strong class="text-darkCyan">${info.direccion}</strong>`;
+      sedeMaps.innerHTML = `${info.maps}`
+      
       // Actualizamos la visibilidad de los servicios
       const services = document.querySelectorAll('.service');
       services.forEach(service => {
@@ -90,12 +95,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Desplazamos la página hacia abajo
       setTimeout(() => {
-        tituloStart.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-        console.log('Desplazamiento realizado con scrollIntoView');
+        if (tituloStart) {
+          tituloStart.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }, 300);
+      
     });
   });
 
