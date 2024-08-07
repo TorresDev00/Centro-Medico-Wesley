@@ -84,13 +84,16 @@ main {
 }
 
 #tituloStart {
-    opacity: 0; /* Inicialmente invisible */
-    transition: opacity 0.5s ease; /* Transición suave */
+    opacity: 1; /* Inicialmente invisible */
+    background-color: var(--bs-body-absolute2);
 }
 
-#tituloStart.visible {
-    opacity: 1; /* Visible */
-    background-color: var(--bs-body-absolute2);
+.selectSede{
+    color: var(--bs-body-color-text);
+}
+
+.icono i{
+    color: rgb(255, 0, 0);
 }
 
 .service.visible {
@@ -110,7 +113,7 @@ main {
 
 .location-icon {
     position: absolute;
-    color: red;
+    color: rgb(255, 0, 0);
     font-size: 2rem;
     /* Puedes ajustar el tamaño según necesites */
     transform: translate(-50%, -100%);

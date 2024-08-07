@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Definimos las especialidades disponibles por cada sede
   const especialidadesPorSede = {
-    sede_1: ['ambulancia', 'medicina_integral', 'pediatria', 'cardiologia', 'otorrinolaringologia', 'ginecologia', 'odontologia', 'neurocirugia', 'nefroloia'],
+    sede_1: ['ambulancia', 'medicina_integral', 'pediatria', 'cardiologia', 'otorrinolaringologia', 'ginecologia', 'odontologia', 'neurocirugia', 'nefrologia', 'psicologia'],
     sede_2: ['medicina_a_domicilio', 'endocrinologia', 'angiologia', 'fisioterapia', 'nutricionista', 'cirugia_general', 'traumatologia', 'ecografia_integral', 'psicologia'],
     sede_3: ['clinica_movil', 'nutricionista', 'fisioterapia', 'gastroenterologia', 'cirugia_general', 'urologia', 'otorrinolaringologia', 'ginecologia', 'odontologia']
     // Añade más según sea necesario
@@ -43,17 +43,17 @@ document.addEventListener("DOMContentLoaded", function () {
     sede_1: {
       nombre: 'Cabudare',
       direccion: 'C. Altamira, Cabudare 3023, Lara',
-      maps: '<iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491.13823052044654!2d-69.22253736994304!3d10.008115351027937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875f722e50bdc7%3A0x68fa4d525677f0bb!2sSeminario%20Wesleyano%20de%20Venezuela!5e0!3m2!1ses-419!2sve!4v1721919468022!5m2!1ses-419!2sve" style="border:0; width: 100%; height: 600px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+      maps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d337.4004379242522!2d-69.2224774983544!3d10.008255855299405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875f000a08eec9%3A0x4194a391889eeae9!2sCentro%20Medico%20Wesley%20Cabudare!5e0!3m2!1ses-419!2sve!4v1723052696696!5m2!1ses-419!2sve" style="border:0; width: 100%; height: 500px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     sede_2: {
       nombre: 'Sede 2',
       direccion: 'Sede 2',
-      maps: '<iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491.13823052044654!2d-69.22253736994304!3d10.008115351027937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875f722e50bdc7%3A0x68fa4d525677f0bb!2sSeminario%20Wesleyano%20de%20Venezuela!5e0!3m2!1ses-419!2sve!4v1721919468022!5m2!1ses-419!2sve" style="border:0; width: 100%; height: 600px;"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+      maps: '<iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491.13823052044654!2d-69.22253736994304!3d10.008115351027937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875f722e50bdc7%3A0x68fa4d525677f0bb!2sSeminario%20Wesleyano%20de%20Venezuela!5e0!3m2!1ses-419!2sve!4v1721919468022!5m2!1ses-419!2sve" style="border:0; width: 100%; height: 500px;"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
     sede_3: {
       nombre: 'Sede 3',
       direccion: 'Sede 3',
-      maps: '<iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491.13823052044654!2d-69.22253736994304!3d10.008115351027937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875f722e50bdc7%3A0x68fa4d525677f0bb!2sSeminario%20Wesleyano%20de%20Venezuela!5e0!3m2!1ses-419!2sve!4v1721919468022!5m2!1ses-419!2sve" style="border:0; width: 100%; height: 600px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+      maps: '<iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491.13823052044654!2d-69.22253736994304!3d10.008115351027937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875f722e50bdc7%3A0x68fa4d525677f0bb!2sSeminario%20Wesleyano%20de%20Venezuela!5e0!3m2!1ses-419!2sve!4v1721919468022!5m2!1ses-419!2sve" style="border:0; width: 100%; height: 500px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     }
     // Añade más según sea necesario
   };
@@ -69,15 +69,17 @@ document.addEventListener("DOMContentLoaded", function () {
       // Obtenemos las especialidades para la sede seleccionada
       const especialidades = especialidadesPorSede[sedeSeleccionada] || [];
 
-      // Actualizamos el nombre y la dirección de la sede
-      const sedeNombre = document.getElementById('sedeNombre');
-      const sedeDireccion = document.getElementById('sedeDireccion');
-      const sedeMaps = document.getElementById('maps');
+      // Obtenemos la información de la sede seleccionada
       const info = infoSedes[sedeSeleccionada] || {};
 
-      sedeNombre.innerHTML = `Sede <strong class="text-darkCyan">${info.nombre}</strong>`;
-      sedeDireccion.innerHTML = ` <strong class="text-darkCyan">${info.direccion}</strong>`;
-      sedeMaps.innerHTML = `${info.maps}`
+      // Actualizamos el contenido del div con la información de la sede seleccionada
+      const tituloStart = document.getElementById('tituloStart');
+      tituloStart.innerHTML = `
+      <div id="maps" style="position: relative; overflow: hidden;">${info.maps}</div>
+      <h2 class="m-3 text-1 fs-3"><i class="bi bi-hospital"></i> <span id="sedeNombre">Sede <strong class="text-darkCyan">${info.nombre}</strong></span></h2>
+      <h2 class="m-3 text-1 fs-3"><i class="bi bi-geo-alt-fill"></i> Dirección: <span id="sedeDireccion"><strong class="text-darkCyan">${info.direccion}</strong></span></h2>
+      <h2 class="m-3 text-1 fs-3"><i class="bi bi-capsule"></i> Esta sede ofrece los siguientes servicios para tu <strong class="text-darkCyan">bienestar:</strong></h2>
+    `;
 
       // Actualizamos la visibilidad de los servicios
       const services = document.querySelectorAll('.service');
@@ -90,18 +92,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // Animamos la visibilidad del título
-      const tituloStart = document.getElementById('tituloStart');
-      tituloStart.classList.add('visible'); // Mostramos el título con transición
-
       // Desplazamos la página hacia abajo
       setTimeout(() => {
         if (tituloStart) {
           tituloStart.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, 300);
-
     });
   });
+
 
 })

@@ -273,7 +273,7 @@ Principios - Telefono
 /* Pantallas 4K */
 @media (min-width: 2560px) {
   .principios .section-cell {
-    margin-top: -550px;
+    margin-top: -300px;
   }
 }
 
