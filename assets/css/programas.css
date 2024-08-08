@@ -98,7 +98,7 @@ Background
 }
 
 .background_2{
-    background-image: url('https://eventos.urquiabas.com/wp-content/uploads/2021/01/Somos-eventos-personal-medico-1024x682.jpg');
+    background-image: url('../img/Ferias\ de\ Vida.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -118,26 +118,6 @@ Background
     margin-bottom: 1rem;
 }
 
-.background_2{
-    background-image: url('https://dif.slp.gob.mx/wp-content/uploads/2022/08/150722-2602-DIF-ARRANCA-EL-DIF-ESTATAL-NUEVA-FERIA-DE-LA-SALUD-EN-EL-ALTIPLANO-5-1024x682.jpeg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    height: 120vh;
-}
-
-.content_2 {
-    text-align: start;
-    color: var(--color-text-light);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.content_2 h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
 
 .background_3{
     background-image: url('https://media.meer.com/attachments/3e42dcf55d4022b73ba384ccc218b8906c272406/store/fill/1090/613/47f191bf67353140d82548979a78be0b7feb19f4b9a83c8b6a51c49b4ef7/Infancia-en-la-calle.jpg');
