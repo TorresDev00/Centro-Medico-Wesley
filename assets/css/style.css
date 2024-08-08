@@ -63,6 +63,7 @@
   --gradient-multicolor-2: var(--gradient-multicolor-2-light);
   --bg-color-modal: var(--color-modal);
   --bg-two-fond: var(--color-backgraund-two-fond-greend);
+  --bg-list-groud: var(--color-primary);
 }
 
 :root[data-bs-theme="dark"] {
@@ -81,6 +82,7 @@
   --gradient-multicolor-2: var(--gradient-multicolor-2-dark);
   --bg-color-modal: var(--color-background-dark);
   --bg-two-fond: var(--color-backgraund-two-fond);
+  --bg-list-groud: var(--color-secondary);
 }
 
 body,

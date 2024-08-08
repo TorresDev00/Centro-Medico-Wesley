@@ -169,6 +169,28 @@ main {
     }
 }
 
+
+.list-group {
+    list-style-type: none; /* Eliminar viñetas */
+    padding: 0; /* Eliminar padding */
+    margin: 0; /* Eliminar margen */
+}
+
+.list-group-item {
+    background-color: var(--bs-body-bg); /* Fondo blanco */
+    border: 1px solid var(--bs-body-bg); /* Borde gris claro */
+    color: var(--bs-body-color-text);
+    border-radius: 4px; /* Bordes redondeados */
+    margin-bottom: 5px; /* Espaciado entre elementos */
+    padding: 10px; /* Espaciado interno */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.list-group-item:hover {
+    background-color: var(--bg-list-groud); /* Fondo gris claro al pasar el ratón */
+    color:var(--color-text-light)
+}
+
 /* Footer */
 
 #footer {
