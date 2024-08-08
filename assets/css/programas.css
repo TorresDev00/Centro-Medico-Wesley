@@ -11,8 +11,7 @@ Navbar
 ****************************************/
 
 #navbar {
-    background: var(--bs-bg);
-
+    background: #0000;
 }
 
 #navbar li a {
@@ -65,6 +64,7 @@ Navbar
 
 main {
     width: 100%;
+    margin-top: -100px;
     background: var(--bs-bg)
 }
 

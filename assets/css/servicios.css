@@ -93,7 +93,7 @@ main {
 }
 
 .icono i{
-    color: rgb(255, 0, 0);
+    color: var(--color-primary)
 }
 
 .service.visible {
@@ -112,11 +112,6 @@ main {
 }
 
 .location-icon {
-    position: absolute;
-    color: rgb(255, 0, 0);
-    font-size: 2rem;
-    /* Puedes ajustar el tamaño según necesites */
-    transform: translate(-50%, -100%);
     cursor: pointer;
 }
 
