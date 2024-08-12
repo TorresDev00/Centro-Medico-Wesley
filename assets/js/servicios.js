@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
  // Definimos las especialidades por sede
 const especialidadesPorSede = {
-  sede_1: ['ambulancia', 'medicina_integral', 'pediatria', 'cardiologia', 'otorrinolaringologia', 'ginecologia', 'odontologia', 'neurocirugia', 'nefrologia', 'psicologia'],
-  sede_2: ['medicina_a_domicilio', 'endocrinologia', 'angiologia', 'fisioterapia', 'nutricionista', 'cirugia_general', 'traumatologia', 'ecografia_integral', 'psicologia'],
-  sede_3: ['clinica_movil', 'nutricionista', 'fisioterapia', 'gastroenterologia', 'cirugia_general', 'urologia', 'otorrinolaringologia', 'ginecologia', 'odontologia'],
+  sede_1: ['pediatria', 'ginecologia', 'medicina_integral', 'odontologia', 'angiologia', 'cardiologia', 'otorrinolaringologia', 'gastroenterologia', 'psicologia', 'traumatologia','pediatria', 'ambulancia', 'clinica_movil'],
+  sede_2: ['medicina_integral', 'ecografia_integral', 'ginecologia', 'pediatria', 'clinica_movil'],
+  sede_3: ['medicina_integral', 'endocrinologia', 'pediatria', 'nutricionista', 'fisioterapia', 'odontologia', 'ginecologia', 'otorrinolaringologia', 'cardiologia', 'traumatologia', 'ecografia_integral' , 'psicologia', 'cirugia_general', 'urologia', 'clinica_movil'],
   sede_4: ['ambulancia', 'medicina_integral', 'pediatria', 'cardiologia', 'otorrinolaringologia', 'ginecologia', 'odontologia', 'neurocirugia', 'nefrologia', 'psicologia'],
   sede_5: ['medicina_a_domicilio', 'endocrinologia', 'angiologia', 'fisioterapia', 'nutricionista', 'cirugia_general', 'traumatologia', 'ecografia_integral', 'psicologia'],
   sede_6: ['medicina_a_domicilio', 'endocrinologia', 'angiologia', 'fisioterapia', 'nutricionista', 'cirugia_general', 'traumatologia', 'ecografia_integral', 'psicologia']
@@ -50,14 +50,14 @@ const infoSedes = {
   },
   sede_2: {
       nombre: 'Valle Dorado',
-      direccion: 'Sede 2',
-      maps: '<iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491.13823052044654!2d-69.22253736994304!3d10.008115351027937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875f722e50bdc7%3A0x68fa4d525677f0bb!2sSeminario%20Wesleyano%20de%20Venezuela!5e0!3m2!1ses-419!2sve!4v1721919468022!5m2!1ses-419!2sve" style="border:0; width: 100%; height: 500px;"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+      direccion: 'Comunidad Valle Dorado, carrera 4, con calle 5, Barquisimeto, Lara',
+      maps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.758016789003!2d-69.42185125497039!3d10.036816441432993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e87630028bd7a2b%3A0x55326e0d5018bb6b!2sCentro%20M%C3%A9dico%20Wesley%20Valle%20Dorado!5e0!3m2!1ses-419!2sve!4v1723425491077!5m2!1ses-419!2sve" style="border:0; width: 100%; height: 500px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
       numberSede: 'sede_2'
   },
   sede_3: {
       nombre: 'La Rotaria',
-      direccion: 'Sede 3',
-      maps: '<iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491.13823052044654!2d-69.22253736994304!3d10.008115351027937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875f722e50bdc7%3A0x68fa4d525677f0bb!2sSeminario%20Wesleyano%20de%20Venezuela!5e0!3m2!1ses-419!2sve!4v1721919468022!5m2!1ses-419!2sve" style="border:0; width: 100%; height: 500px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+      direccion: 'Av. Rotaria con carrera 17, C.C. Los CARDENALES. Local 1.',
+      maps: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.52893743461516!2d-69.35544162059291!3d10.061096418933586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8767003ee941b5%3A0x1c67ce20212dacce!2sCentro%20Medico%20Wesley%20La%20Rotaria!5e0!3m2!1ses-419!2sve!4v1723433665476!5m2!1ses-419!2sve" style="border:0; width: 100%; height: 500px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
       numberSede: 'sede_3'
   },
   sede_4: {

@@ -12,6 +12,7 @@ Navbar
 
 #navbar {
     background: #0000;
+    z-index: 1000; /* Asegura que esté sobre el contenido */
 }
 
 #navbar li a {
@@ -138,4 +139,44 @@ Background
 .content_3 h1 {
     font-size: 3rem;
     margin-bottom: 5rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0000000f; /* Capa semitransparente */
+    z-index: 1;
+}
+
+.content, .content_2, .content_3 {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.greenColor {
+    color: #28a745;
 }

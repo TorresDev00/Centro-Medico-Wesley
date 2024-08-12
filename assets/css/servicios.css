@@ -84,7 +84,7 @@ main {
 }
 
 #tituloStart {
-    opacity: 1; /* Inicialmente invisible */
+    box-shadow: 8px 8px 5px 1px #00000040;
     background-color: var(--bs-body-absolute2);
 }
 
@@ -109,6 +109,16 @@ main {
 .map-container {
     position: relative;
     display: inline-block;
+}
+
+.mapaVenezuela{
+    filter: drop-shadow(10px 10px 0 #00000036 );
+}
+
+.stateText{
+    filter: none !important;
+    fill: var(--bs-body-color-text);
+    font-size: 50px;
 }
 
 .location-icon {

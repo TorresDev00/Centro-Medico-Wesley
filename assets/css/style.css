@@ -637,11 +637,22 @@ body {
   }
 }
 
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+}
+
 .btnPlus {
   margin: 20px 0;
   align-self: center;
   border-radius: 50%;
   background: var(--color-secondary);
+  border: 1px #fff solid;
+  animation: pulse 2s infinite; /* Aplica la animación de pulsación */
 }
 
 .btnPlus:hover {
@@ -761,12 +772,12 @@ body.modal-open {
 }
 
 #box .boxValues .icon {
-  color: var(--bs-primary);
+  color: var(--bg-list-groud);
   font-size: 4rem;
 }
 
 #box .boxValues .highlight {
-  border-bottom: 4px solid var(--bs-primary);
+  border-bottom: 4px solid var(--bg-list-groud);
   display: inline-block;
 }
 

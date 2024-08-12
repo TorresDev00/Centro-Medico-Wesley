@@ -242,8 +242,15 @@ Principios - Telefono
   margin-top: -250px;
 }
 
+/* Pantallas muy pequeñas (teléfonos más pequeños) */
+@media (min-width: 250px) {
+  .principios .section-cell {
+    margin-top: -100px;
+  }
+}
+
 /* Pantallas pequeñas (teléfonos) */
-@media (max-width: 425px) {
+@media (min-width: 380px) {
   .principios .section-cell {
     margin-top: -135px;
   }
@@ -252,7 +259,7 @@ Principios - Telefono
 /* Pantallas medianas (tablets) */
 @media (min-width: 426px) and (max-width: 768px) {
   .principios .section-cell {
-    margin-top: -150px;
+    margin-top: -200px;
   }
 }
 
@@ -346,9 +353,16 @@ Principios - Telefono
 }
 
 
-@media (min-width: 786px) {
+@media (min-width: 600px) {
   .nosotros {
-    height: 120vh;
+    height: 120vw;
+  }
+
+}
+
+@media (min-width: 900px) {
+  .nosotros {
+    height: 120vw;
   }
 
 }
@@ -356,7 +370,7 @@ Principios - Telefono
 /* Estilos para pantallas más grandes */
 @media (min-width: 1200px) {
   .nosotros {
-    height: 180vh;
+    height: 170vh;
   }
 
   .vision p,
@@ -371,7 +385,7 @@ Principios - Telefono
 
 @media (min-width: 1800px) {
   .nosotros {
-    height: 120vh;
+    height: 130vh;
   }
 
   .vision p,
@@ -386,7 +400,7 @@ Principios - Telefono
 
 @media (min-width: 2560px) {
   .nosotros {
-    height: 120vh;
+    height: 140vh;
   }
 
   .vision p,
@@ -398,6 +412,31 @@ Principios - Telefono
     width: 75%;
   }
 }
+
+/**************************************
+Reseña
+****************************************/
+
+.reseña{
+  background: var(--bs-body-color);
+}
+
+.title-reseña .title{
+  color:var(--color-black);
+  font-weight: bold;
+}
+
+.reseña .info{
+  color:var(--color-black);
+  text-align: justify;
+}
+
+.reseña .btn-reseña{
+  color: rgb(255, 255, 255);
+  background: rgb(16, 16, 16);
+  border-radius: 34px;
+}
+
 
 
 /**************************************
@@ -782,7 +821,7 @@ Circulo
   }
 
   .pillar p {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .center-text{
