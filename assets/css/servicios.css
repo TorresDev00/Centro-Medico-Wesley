@@ -115,6 +115,13 @@ main {
     filter: drop-shadow(10px 10px 0 #00000036 );
 }
 
+
+@media (max-width: 450px){
+    .mapaVenezuela{
+        width: 150vw;
+    }
+}
+
 .stateText{
     filter: none !important;
     fill: var(--bs-body-color-text);

@@ -8,6 +8,10 @@
     <meta name="description" content="Centro Medico Wesleyano: Construyendo una comunidad saludable y plena">
     <meta name="keywords"
         content="Centro Médico Wesley, servicios médicos, atención médica, cuidado integral, salud, medicina, clínica, doctores, Venezuela, enfermedades, tratamientos, consultas médicas, bienestar, salud preventiva, especialistas médicos">
+
+    <link href="assets/img/iconoWesley.ico" rel="icon">
+    <link href="assets/img/iconoWesley.ico" rel="apple-touch-icon">
+
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
@@ -94,13 +98,14 @@
                 </div>
 
                 <div class="formulario">
-                    <form>
+                    <form class="form">
                         <div class="mb-4">
                             <div class="input-group">
                                 <button type="button" class="iconos btn btn-color"><i
                                         class="bi bi-envelope"></i></button>
                                 <input type="text" placeholder="Correo Electronico" class="form-control" id="email">
                             </div>
+                            <p class="error1 m-1"></p>
                         </div>
 
                         <div class="row">
@@ -110,13 +115,15 @@
                                             class="bi bi-telephone"></i></button>
                                     <input type="number" placeholder="Telefono" class="form-control" id="telefono">
                                 </div>
+                                <p class="error2 m-1"></p>
                             </div>
                             <div class="mb-4 col-sm-6">
                                 <div class="input-group">
                                     <button type="button" class="iconos btn btn-color"><i
                                             class="bi bi-people-fill"></i></button>
-                                    <input type="text" placeholder="Nombre" class="form-control" id="name">
+                                    <input type="text" placeholder="Nombre y Apellido" class="form-control" id="name">
                                 </div>
+                                <p class="error3 m-1"></p>
                             </div>
                         </div>
 
@@ -181,6 +188,7 @@
     </footer>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/sw2/sweetalert2.all.min.js"></script>
     <script src="assets/js/contactos.js"></script>
 </body>
 

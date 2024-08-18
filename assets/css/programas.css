@@ -2,6 +2,10 @@
 Genaral
 ****************************************/
 
+html, body{
+    overflow: hidden; /* Oculta la barra de desplazamiento del navegador */
+}
+
 body {
     background: var(--bs-bg)
 }
@@ -12,11 +16,12 @@ Navbar
 
 #navbar {
     background: #0000;
-    z-index: 1000; /* Asegura que esté sobre el contenido */
+    z-index: 1000;
+    /* Asegura que esté sobre el contenido */
 }
 
 #navbar li a {
- color: var(--bs-body-color-text);
+    color: var(--bs-body-color-text);
 }
 
 #mobileMenu {
@@ -29,11 +34,11 @@ Navbar
     color: var(--color-third) !important;
 }
 
-.offcanvas-title{
+.offcanvas-title {
     color: var(--bs-body-color-text);
 }
 
-.vr{
+.vr {
     color: var(--bs-body-color-text);
 }
 
@@ -51,11 +56,11 @@ Navbar
 
 #theme-icon {
     color: var(--bs-body-color-text);
-  }
-  
-  #theme-text{
+}
+
+#theme-text {
     color: var(--bs-body-color-text);
-  }
+}
 
 
 
@@ -64,23 +69,29 @@ Navbar
 ****************************************/
 
 main {
-    width: 100%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
     margin-top: -100px;
-    background: var(--bs-bg)
+    background: #0000
+}
+
+section {
+    scroll-snap-align: start;
 }
 
 /**************************************
 Background
 ****************************************/
 
-.background{
-    background-image: url('https://eventos.urquiabas.com/wp-content/uploads/2021/01/Somos-eventos-personal-medico-1024x682.jpg');
+.background {
+    background-image: linear-gradient(#b6b6b636, #010101c0), url('https://eventos.urquiabas.com/wp-content/uploads/2021/01/Somos-eventos-personal-medico-1024x682.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     justify-items: center;
     align-items: end;
-    height: 100vh;
+    height: 105vh;
 }
 
 .content {
@@ -92,20 +103,22 @@ Background
 .content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    font-family: sf-proDisplayMedium;
 }
 
-.content .greenColor{
+.content .greenColor {
     color: var(--color-primary);
 }
 
-.background_2{
-    background-image: url('../img/Ferias\ de\ Vida.webp');
+
+.background_2 {
+    background: linear-gradient(#0000, #131111), url('../img/Ferias\ de\ Vida.webp');
     background-size: cover;
     background-position: center;
     display: flex;
     justify-items: center;
     align-items: center;
-    height: 120vh;
+    height: 150vh;
 }
 
 .content_2 {
@@ -117,16 +130,17 @@ Background
 .content_2 h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    font-family: sf-proDisplayMedium;
 }
 
 
-.background_3{
-    background-image: url('https://media.meer.com/attachments/3e42dcf55d4022b73ba384ccc218b8906c272406/store/fill/1090/613/47f191bf67353140d82548979a78be0b7feb19f4b9a83c8b6a51c49b4ef7/Infancia-en-la-calle.jpg');
+.background_3 {
+    background: linear-gradient(#13111149, #010101c0), url('https://media.meer.com/attachments/3e42dcf55d4022b73ba384ccc218b8906c272406/store/fill/1090/613/47f191bf67353140d82548979a78be0b7feb19f4b9a83c8b6a51c49b4ef7/Infancia-en-la-calle.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     justify-items: center;
-    align-items: end;
+    align-items: center;
     height: 120vh;
 }
 
@@ -139,44 +153,110 @@ Background
 .content_3 h1 {
     font-size: 3rem;
     margin-bottom: 5rem;
+    font-family: sf-proDisplayMedium;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #0000000f; /* Capa semitransparente */
-    z-index: 1;
-}
 
-.content, .content_2, .content_3 {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    max-width: 800px;
-}
+@media (min-width: 280px) and (max-width: 575.98px) {
 
-h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: fadeInUp 1.5s ease-in-out;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+    .background_2 {
+        background: linear-gradient(#0000, #131111), url(../img/Ferias\ de\ Vida_cell.webp);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        height: 120vh;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .content h1,
+    .content_2 h1,
+    .content_3 h1 {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
     }
+
+    .content,
+    .content_2,
+    .content_3 {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
 }
 
-.greenColor {
-    color: #28a745;
+/* Pantallas pequeñas (celulares en orientación vertical, 576px y mayores) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    .content h1,
+    .content_2 h1,
+    .content_3 h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
 }
+
+/* Pantallas medianas (tabletas en orientación vertical, 768px y mayores) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .content h1,
+    .content_2 h1,
+    .content_3 h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+/* Pantallas grandes (computadoras de escritorio y laptops, 992px y mayores) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    .content h1,
+    .content_2 h1,
+    .content_3 h1 {
+        font-size: 3rem;
+        margin-bottom: 3.5rem;
+    }
+
+}
+
+/* Pantallas extra grandes (monitores de alta resolución, 1200px y mayores) */
+@media (min-width: 1200px) and (max-width: 1599.98px) {
+
+    .content h1,
+    .content_2 h1,
+    .content_3 h1 {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+}
+
+/* Pantallas ultra grandes (monitores 4K y mayores, 1600px y mayores) */
+@media (min-width: 1600px) and (max-width: 2559.98px) {
+
+    .content h1,
+    .content_2 h1,
+    .content_3 h1 {
+        font-size: 4rem;
+        margin-bottom: 2.5rem;
+    }
+
+}
+
+/* Pantallas 4K (monitores 4K y mayores, 2560px y mayores) */
+@media (min-width: 2560px) {
+
+    .content h1,
+    .content_2 h1,
+    .content_3 h1 {
+        font-size: 5rem;
+        margin-bottom: 3rem;
+    }
+
+}
+
+#footer {
+    background: var(--color-background-dark);
+}
+

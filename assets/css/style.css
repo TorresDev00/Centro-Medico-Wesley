@@ -22,6 +22,16 @@
   src: url('../font-family/Montserrat-Black.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'montserrat-Black';
+  src: url('../font-family/Montserrat-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'sf-proDisplayMedium';
+  src: url('../font-family/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+}
+
 
 :root {
   --color-primary: rgb(139, 190, 0);
@@ -37,10 +47,10 @@
   --color-black: #000;
   --color-yellow: #fbff00;
   --color-modal: #69caa699;
-  --gradient-multicolor-dark: linear-gradient(90deg,  rgb(0, 255, 0), rgb(0, 255, 255), rgb(0, 128, 255),rgb(255, 0, 255),rgb(255, 0, 128), rgb(255, 255, 0) );
-  --gradient-multicolor-light: linear-gradient(90deg, rgb(139 190 0), rgb(136 150 255), rgb(63 190 238), rgb(158 139 255), rgb(136 150 255), rgb(255, 121, 91));
-  --gradient-multicolor-2-light: linear-gradient(90deg, rgb(158 139 255),rgb(63 190 238) ,rgb(136 150 255), rgb(16 76 137));
-  --gradient-multicolor-2-dark: linear-gradient(90deg, rgb(120, 0, 255), rgb(0 231 231), rgb(180 0 255), rgb(0 6 255));     
+  --gradient-multicolor-dark: linear-gradient(90deg, rgb(0, 255, 0), rgb(0, 255, 255), rgb(0, 128, 255), rgb(255, 0, 255), rgb(255, 0, 128), rgb(255, 255, 0));
+  --gradient-multicolor-2-dark: linear-gradient(90deg, rgb(120, 0, 255), rgb(0, 231, 231), rgb(180, 0, 255), rgb(0, 6, 255));
+  --gradient-multicolor-light: linear-gradient(90deg, rgb(139, 190, 0), rgb(136, 150, 255), rgb(63, 190, 238), rgb(158, 139, 255), rgb(136, 150, 255), rgb(255, 121, 91));
+  --gradient-multicolor-2-light: linear-gradient(90deg, rgb(158, 139, 255), rgb(63, 190, 238), rgb(136, 150, 255), rgb(16, 76, 137));      
   --shadow-color-black: rgba(0, 0, 0, 0.15);
   --shadow-color-light: rgba(255, 255, 255, 0.15);
   --shadow-hover-dark: rgba(0, 0, 0, 0.12);
@@ -767,7 +777,7 @@ body.modal-open {
 }
 
 #box .boxValues h3 {
-  font-family: "monserrat-BlackItalic";
+  font-family: "monserrat-BlackItalic", Arial;
   color: var(--color-text-dark);
 }
 

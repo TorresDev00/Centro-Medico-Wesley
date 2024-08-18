@@ -362,7 +362,7 @@ Principios - Telefono
 
 @media (min-width: 900px) {
   .nosotros {
-    height: 120vw;
+    height: 90vw;
   }
 
 }
@@ -370,7 +370,7 @@ Principios - Telefono
 /* Estilos para pantallas más grandes */
 @media (min-width: 1200px) {
   .nosotros {
-    height: 170vh;
+    height: 60vh;
   }
 
   .vision p,
@@ -385,7 +385,7 @@ Principios - Telefono
 
 @media (min-width: 1800px) {
   .nosotros {
-    height: 130vh;
+    height: 40vh;
   }
 
   .vision p,
@@ -400,7 +400,7 @@ Principios - Telefono
 
 @media (min-width: 2560px) {
   .nosotros {
-    height: 140vh;
+    height: 30vh;
   }
 
   .vision p,
