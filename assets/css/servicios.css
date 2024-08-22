@@ -26,7 +26,7 @@ Navbar
 .navbar-toggler:hover,
 .nav-link:hover,
 .nav-link:focus {
-    color: var(--color-third) !important;
+    color: var(--color-primary) !important;
 }
 
 .offcanvas-title {
@@ -74,9 +74,10 @@ main {
   Servicios
 ****************************************/
 
-#servicio{
+#servicio {
     padding-top: 100px;
 }
+
 .service {
     display: none;
     opacity: 0;
@@ -88,11 +89,11 @@ main {
     background-color: var(--bs-body-absolute2);
 }
 
-.selectSede{
+.selectSede {
     color: var(--bs-body-color-text);
 }
 
-.icono i{
+.icono i {
     color: var(--color-primary)
 }
 
@@ -100,7 +101,14 @@ main {
     /* Ajusta según el contenido máximo */
     opacity: 1;
     display: block;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
 }
+
+.service.visible:hover {
+    transform: scale(1.03);
+}
+
 
 #servicio .text-1 {
     color: var(--bs-body-color-text);
@@ -111,18 +119,18 @@ main {
     display: inline-block;
 }
 
-.mapaVenezuela{
-    filter: drop-shadow(10px 10px 0 #00000036 );
+.mapaVenezuela {
+    filter: drop-shadow(10px 10px 0 #00000036);
 }
 
 
-@media (max-width: 450px){
-    .mapaVenezuela{
+@media (max-width: 450px) {
+    .mapaVenezuela {
         width: 150vw;
     }
 }
 
-.stateText{
+.stateText {
     filter: none !important;
     fill: var(--bs-body-color-text);
     font-size: 50px;
@@ -130,7 +138,13 @@ main {
 
 .location-icon {
     cursor: pointer;
+    transition: fill 0.3s ease;
 }
+
+.location-icon:hover {
+    fill: #00302a;
+}
+
 
 #servicio .text-1 .text-darkCyan,
 #servicio .title .text-darkCyan {
@@ -141,7 +155,7 @@ main {
     background-color: var(--bs-body-absolute2);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 5px 9px 5px rgb(0 0 0 / 17%);
     text-align: start;
     height: 100%;
     display: flex;
@@ -161,6 +175,7 @@ main {
     font-weight: bold;
     color: var(--bs-body-color-text);
 }
+
 
 @media (min-width: 576px) {
     .boxService .title {
@@ -188,37 +203,86 @@ main {
 
 
 .list-group {
-    list-style-type: none; /* Eliminar viñetas */
-    padding: 0; /* Eliminar padding */
-    margin: 0; /* Eliminar margen */
+    list-style-type: none;
+    /* Eliminar viñetas */
+    padding: 0;
+    /* Eliminar padding */
+    margin: 0;
+    /* Eliminar margen */
 }
 
 .list-group-item {
-    background-color: var(--bs-body-bg); /* Fondo blanco */
-    border: 1px solid var(--bs-body-bg); /* Borde gris claro */
+    background-color: var(--bs-body-bg);
+    border: 1px solid var(--bs-body-bg);
     color: var(--bs-body-color-text);
-    border-radius: 4px; /* Bordes redondeados */
-    margin-bottom: 5px; /* Espaciado entre elementos */
-    padding: 10px; /* Espaciado interno */
-    transition: background-color 0.3s ease; /* Transición suave */
+    border-radius: 4px;
+    margin-bottom: 5px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    /* Transición suave */
+    cursor: pointer;
 }
 
 .list-group-item:hover {
-    background-color: var(--bg-list-groud); /* Fondo gris claro al pasar el ratón */
-    color:var(--color-text-light)
+    background-color: var(--bg-list-groud);
+    /* Fondo gris claro al pasar el ratón */
+    color: var(--color-text-light)
 }
+
+/* Modal */
+
+.modal-content {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--bs-body-color-text);
+}
+
+.modal-title {
+    flex-grow: 1;
+    margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+    color: var(--bg-modal-title);
+}
+
+.section-services img {
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out, drop-shadow 0.3s ease-in-out;
+}
+
+.section-services img:hover {
+    transform: scale(1.03);
+    filter: drop-shadow(10px 10px 0 #00000036);
+}
+
+.info h3 {
+    color: var(--bs-body-color-text);
+    font-weight: 600;
+}
+
+.info p {
+    color: var(--bs-body-color-text);
+    text-align: justify;
+}
+
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+
 
 /* Footer */
 
 #footer {
     background: var(--bs-body-bg);
     color: var(--bs-body-color-text);
-  }
+}
 
-  #footer .logos-footer a i {
+#footer .logos-footer a i {
     color: var(--bs-body-color-text);
-  }
-  
-  #footer .link-footer li a {
+}
+
+#footer .link-footer li a {
     color: var(--bs-body-color-text);
-  }
+}

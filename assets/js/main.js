@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     themeToggle.addEventListener('click', toggleTheme);
 
 
-
     const swiper = new Swiper('.servicios', {
         speed: 600,
         loop: true,

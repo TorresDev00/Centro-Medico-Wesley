@@ -74,6 +74,7 @@
   --bg-color-modal: var(--color-modal);
   --bg-two-fond: var(--color-backgraund-two-fond-greend);
   --bg-list-groud: var(--color-primary);
+  --bg-modal-title: var(--color-primary);
 }
 
 :root[data-bs-theme="dark"] {
@@ -93,6 +94,7 @@
   --bg-color-modal: var(--color-background-dark);
   --bg-two-fond: var(--color-backgraund-two-fond);
   --bg-list-groud: var(--color-secondary);
+  --bg-modal-title: var(--color-text-light);
 }
 
 body,
@@ -171,6 +173,11 @@ body {
   background-color: var(--color-background-light);
 }
 
+.nav-link.active {
+  color: #668b00 !important;
+  font-weight: bold;
+}
+
 
 /* Header */
 
@@ -178,6 +185,41 @@ body {
   padding: 10rem 0;
   background-color: var(--bs-primary);
   color: var(--color-text-light);
+}
+
+/* Para dispositivos móviles (por ejemplo, menos de 576px de ancho) */
+@media (max-width: 575.98px) {
+  #header {
+    padding: 5rem 0;
+  }
+}
+
+/* Para tabletas (por ejemplo, entre 576px y 768px de ancho) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #header {
+    padding: 7rem 0;
+  }
+}
+
+/* Para dispositivos de escritorio pequeños (por ejemplo, entre 768px y 992px de ancho) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #header {
+    padding: 8rem 0; 
+  }
+}
+
+/* Para dispositivos de escritorio medianos (por ejemplo, entre 992px y 1200px de ancho) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #header {
+    padding: 9rem 0; 
+  }
+}
+
+/* Para dispositivos de escritorio grandes (por ejemplo, más de 1200px de ancho) */
+@media (min-width: 1200px) {
+  #header {
+    padding: 10rem 0; 
+  }
 }
 
 #header #title_1 h1 {

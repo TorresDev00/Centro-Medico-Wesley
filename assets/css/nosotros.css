@@ -14,7 +14,7 @@ Navbar
 .navbar-toggler:hover,
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--color-third) !important;
+  color: var(--color-primary) !important;
 }
 
 #citaNow {
@@ -362,7 +362,7 @@ Principios - Telefono
 
 @media (min-width: 900px) {
   .nosotros {
-    height: 90vw;
+    height: 100vw;
   }
 
 }
@@ -429,12 +429,6 @@ Reseña
 .reseña .info{
   color:var(--color-black);
   text-align: justify;
-}
-
-.reseña .btn-reseña{
-  color: rgb(255, 255, 255);
-  background: rgb(16, 16, 16);
-  border-radius: 34px;
 }
 
 
