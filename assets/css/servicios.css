@@ -57,7 +57,10 @@ Navbar
     color: var(--bs-body-color-text);
 }
 
-
+.nav-link.active {
+    color: #668b00 !important;
+    font-weight: bold;
+  }
 
 /**************************************
   Main

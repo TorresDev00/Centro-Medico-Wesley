@@ -106,14 +106,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.addEventListener('show.bs.modal', function (event) {
-        if(window.innerWidth > 992){
-         document.body.style.paddingRight = '16px'; // Ajusta el valor según el ancho de la barra de desplazamiento
+        if (window.innerWidth > 992) {
+            document.body.style.paddingRight = '16px'; // Ajusta el valor según el ancho de la barra de desplazamiento
         }
     });
-    
+
     document.addEventListener('hidden.bs.modal', function (event) {
         document.body.style.paddingRight = ''; // Restablece el padding cuando el modal se cierre
     });
+
 
 
 })

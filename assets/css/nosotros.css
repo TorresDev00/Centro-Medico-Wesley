@@ -25,6 +25,11 @@ Navbar
   background-color: var(--color-background-light);
 }
 
+.nav-link.active {
+  color: #668b00 !important;
+  font-weight: bold;
+}
+
 /**************************************
 Main
 ****************************************/
@@ -344,6 +349,13 @@ Principios - Telefono
 
 }
 
+@media (min-width: 300px) {
+  .nosotros {
+    height: 105%
+  }
+
+}
+
 
 @media (min-width: 400px) {
   .nosotros {
@@ -370,7 +382,7 @@ Principios - Telefono
 /* Estilos para pantallas más grandes */
 @media (min-width: 1200px) {
   .nosotros {
-    height: 60vh;
+    height: 165vh;
   }
 
   .vision p,
@@ -400,7 +412,7 @@ Principios - Telefono
 
 @media (min-width: 2560px) {
   .nosotros {
-    height: 30vh;
+    height: 75vh;
   }
 
   .vision p,
@@ -811,7 +823,7 @@ Circulo
   .iconoPilar_3,
   .iconoPilar_4,
   .iconoPilar_5 {
-    width: 14vw;
+    width: 17vw;
   }
 
   .pillar p {

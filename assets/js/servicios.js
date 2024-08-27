@@ -209,6 +209,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 300);
     }
 
+    const iconUrls = [
+        'assets/img/iconos/Nutricionista.svg',
+        'assets/img/iconos/Esqueleto.svg',
+        'assets/img/iconos/Servicio-Default.svg',
+        'assets/img/iconos/Dientes.svg',
+        'assets/img/iconos/Corazon.svg',
+        'assets/img/iconos/Cerebro.svg',
+        'assets/img/iconos/CerebroCirugia.svg'
+    ];
+
+    function preloadIcons(urls){
+        urls.forEach(url =>{
+            const img = new Image();
+            img.src = url;
+        })
+    }
+
+    preloadIcons(iconUrls);
+
     document.querySelectorAll('.service').forEach(item => {
         item.addEventListener('click', event => {
             const serviceType = item.getAttribute('data-service');
@@ -270,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 case 'fisioterapia':
                     serviceInfo.title = 'Servicio: Fisioterapia';
                     serviceInfo.description = 'Proporcionamos tratamientos de rehabilitación física para mejorar la movilidad, aliviar el dolor y restaurar la función muscular y articular tras lesiones o cirugías.';
-                    serviceInfo.icon = 'assets/img/iconos/Fisioterapia.svg';
+                    serviceInfo.icon = 'assets/img/iconos/Esqueleto.svg';
                     break;
     
                 case 'nefrologia':
@@ -282,13 +301,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 case 'neurocirugia':
                     serviceInfo.title = 'Servicio: Neurocirugía';
                     serviceInfo.description = 'Ofrecemos intervenciones quirúrgicas avanzadas para tratar afecciones del sistema nervioso central y periférico, asegurando procedimientos seguros y efectivos.';
-                    serviceInfo.icon = 'assets/img/iconos/Neurocirugia.svg';
+                    serviceInfo.icon = 'assets/img/iconos/CerebroCirugia.svg';
                     break;
     
                 case 'odontologia':
                     serviceInfo.title = 'Servicio: Odontología';
                     serviceInfo.description = 'Brindamos una amplia gama de servicios dentales, desde limpieza y prevención hasta tratamientos restaurativos y estéticos, para mantener tu sonrisa saludable.';
-                    serviceInfo.icon = 'assets/img/iconos/Odontologia.svg';
+                    serviceInfo.icon = 'assets/img/iconos/Dientes.svg';
                     break;
     
                 case 'ginecologia':
@@ -306,7 +325,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 case 'cardiologia':
                     serviceInfo.title = 'Servicio: Cardiología';
                     serviceInfo.description = 'Proporcionamos cuidado especializado para la salud cardiovascular, incluyendo diagnóstico y tratamiento de enfermedades del corazón y los vasos sanguíneos.';
-                    serviceInfo.icon = 'assets/img/iconos/Cardiologia.svg';
+                    serviceInfo.icon = 'assets/img/iconos/Corazon.svg';
                     break;
     
                 case 'traumatologia':
@@ -324,7 +343,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 case 'psicologia':
                     serviceInfo.title = 'Servicio: Psicología';
                     serviceInfo.description = 'Ofrecemos apoyo psicológico profesional para ayudarte a enfrentar y superar desafíos emocionales, mentales y conductuales, promoviendo tu bienestar integral.';
-                    serviceInfo.icon = 'assets/img/iconos/Psicologia.svg';
+                    serviceInfo.icon = 'assets/img/iconos/Cerebro.svg';
                     break;
     
                 case 'gastroenterologia':
