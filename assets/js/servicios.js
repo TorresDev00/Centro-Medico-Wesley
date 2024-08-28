@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const iconUrls = [
         'assets/img/iconos/Nutricionista.svg',
-        'assets/img/iconos/Esqueleto.svg',
+        'assets/img/iconos/EsqueletoFisioterapia.svg',
         'assets/img/iconos/Servicio-Default.svg',
         'assets/img/iconos/Dientes.svg',
         'assets/img/iconos/Corazon.svg',
@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 case 'fisioterapia':
                     serviceInfo.title = 'Servicio: Fisioterapia';
                     serviceInfo.description = 'Proporcionamos tratamientos de rehabilitación física para mejorar la movilidad, aliviar el dolor y restaurar la función muscular y articular tras lesiones o cirugías.';
-                    serviceInfo.icon = 'assets/img/iconos/Esqueleto.svg';
+                    serviceInfo.icon = 'assets/img/iconos/EsqueletoFisioterapia.svg';
                     break;
     
                 case 'nefrologia':
