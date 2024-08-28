@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
         'assets/img/iconos/Cerebro.svg',
         'assets/img/iconos/CerebroCirugia.svg'
     ];
-
+ 
     function preloadIcons(urls){
         urls.forEach(url =>{
             const img = new Image();
