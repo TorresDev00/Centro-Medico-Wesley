@@ -397,7 +397,7 @@ Principios - Telefono
 
 @media (min-width: 1800px) {
   .nosotros {
-    height: 40vh;
+    height: 110vh;
   }
 
   .vision p,
@@ -412,7 +412,7 @@ Principios - Telefono
 
 @media (min-width: 2560px) {
   .nosotros {
-    height: 75vh;
+    height: 110vh;
   }
 
   .vision p,
