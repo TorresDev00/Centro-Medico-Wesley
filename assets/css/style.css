@@ -598,8 +598,6 @@ body {
 #testimonios {
   background: var(--bs-secondary);
   border-radius: 2vw;
-  position: relative;
-  overflow: hidden;
 }
 
 .medico-img {
