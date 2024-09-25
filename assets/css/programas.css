@@ -73,7 +73,7 @@ Navbar
 
 main {
     scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+    overflow-y: hidden; 
     height: 100vh;
     margin-top: -100px;
     background: #0000

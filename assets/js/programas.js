@@ -32,51 +32,72 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let sections = document.querySelectorAll('section');
   let mainContainer = document.querySelector('.main');
-  let threshold = window.innerHeight / 2;
-
-  sections.forEach(sections => sections.style.scrollSnapAlign = "start");
-
-  let isScrolling = false // evita miltiples desplazamientos simultaneamente
-
-  mainContainer.addEventListener("wheel", function (event) {
-    event.preventDefault();
-
-    if (!isScrolling) {
-      isScrolling = true;
-
-      if (event.deltaY > 0) {
-        scrollNext();
-      } else if (event.deltaY < 0) {
-        scrollPrev();
+  let currentSectionIndex = 0;
+  let isScrolling = false;
+  let lastScrollTime = 0;
+  const scrollCooldown = 1000; // 1 segundo de espera entre desplazamientos
+  
+  function getCurrentSectionIndex() {
+    const scrollTop = mainContainer.scrollTop;
+    for (let i = 0; i < sections.length; i++) {
+      if (scrollTop < sections[i].offsetTop + sections[i].offsetHeight / 2) {
+        return i;
       }
-
-      setTimeout(() => isScrolling = false, 800);
     }
-  })
-
-
-  function scrollNext() {
-      for (const section of sections) {
-          const rect = section.getBoundingClientRect();
-          console.log('rect.top:', rect.top, 'threshold:', threshold);
-          if (rect.top >= 0 && rect.top > threshold) { // Asegurar que rect.top sea positivo
-              console.log('Scrolling to next section');
-              section.scrollIntoView({ behavior: "smooth" });
-              break;
-          }
-      }
+    return sections.length - 1;
   }
-
-function scrollPrev() {
-    for (let i = sections.length - 1; i >= 0; i--) {
-        const rect = sections[i].getBoundingClientRect();
-        console.log('rect.bottom:', rect.bottom, 'threshold:', threshold);
-        if (rect.bottom < window.innerHeight - threshold) {
-            console.log('Scrolling to previous section');
-            sections[i].scrollIntoView({ behavior: "smooth" });
-            break;
-        }
+  
+  function scrollToSection(index) {
+    if (index >= 0 && index < sections.length) {
+      currentSectionIndex = index;
+      const targetSection = sections[index];
+      const offset = mainContainer.offsetTop;
+      mainContainer.scrollTo({
+        top: targetSection.offsetTop - offset,
+        behavior: 'smooth'
+      });
     }
-}
+  }
+  
+  function handleScroll(event) {
+    event.preventDefault();
+    const now = Date.now();
+  
+    if (!isScrolling && now - lastScrollTime > scrollCooldown) {
+      isScrolling = true;
+      lastScrollTime = now;
+  
+      const direction = event.deltaY > 0 ? 1 : -1;
+      const nextIndex = getCurrentSectionIndex() + direction;
+  
+      if (nextIndex >= 0 && nextIndex < sections.length) {
+        scrollToSection(nextIndex);
+      }
+  
+      setTimeout(() => {
+        isScrolling = false;
+      }, scrollCooldown);
+    }
+  }
+  
+  function initializeScroll() {
+    mainContainer.scrollTop = 0;
+    currentSectionIndex = 0;
+  }
+  
+  mainContainer.addEventListener("wheel", handleScroll, { passive: false });
+  
+  window.addEventListener('load', () => {
+    initializeScroll();
+    // Esperar a que las imágenes se carguen antes de permitir el desplazamiento
+    Promise.all(Array.from(document.images).map(img => {
+      if (img.complete) return Promise.resolve();
+      return new Promise(resolve => { img.onload = img.onerror = resolve; });
+    })).then(() => {
+      mainContainer.style.overflowY = 'scroll';
+    });
+  });
+  
+  window.addEventListener('resize', initializeScroll);
 
 })
