@@ -14,7 +14,7 @@ Navbar
 .navbar-toggler:hover,
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--color-primary) !important;
+  color: var(--hover-nosotros) !important;
 }
 
 #citaNow {

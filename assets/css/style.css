@@ -23,11 +23,6 @@
 }
 
 @font-face {
-  font-family: 'montserrat-Black';
-  src: url('../font-family/Montserrat-Black.otf') format('opentype');
-}
-
-@font-face {
   font-family: 'sf-proDisplayMedium';
   src: url('../font-family/SFPRODISPLAYMEDIUM.OTF') format('opentype');
 }
@@ -56,9 +51,11 @@
   --shadow-hover-dark: rgba(0, 0, 0, 0.12);
   --shadow-hover-light: rgba(255, 255, 255, 0.12);
   --hover: #004055;
-  --hover-dark: #00decd;
+  --hover-dark: #8bc34a;
   --active: #2e2e2e;
   --active-dark: #cacaca;
+  --hoverNosotros: #2e2e2e;
+  --hoverNosotros-dark: #128392;
 }
 
 :root[data-bs-theme="light"] {
@@ -81,6 +78,7 @@
   --bg-modal-title: var(--color-primary);
   --hover-index: var(--hover);
   --active-index: var(--active);
+  --hover-nosotros: var(--hoverNosotros);
 }
 
 :root[data-bs-theme="dark"] {
@@ -103,6 +101,7 @@
   --bg-modal-title: var(--color-text-light);
   --hover-index: var(--hover-dark);
   --active-index: var(--active-dark);
+  --hover-nosotros: var(--hoverNosotros-dark)
 }
 
 body,
@@ -172,15 +171,21 @@ body {
 #citaNow {
   background-color: var(--color-secondary);
   border-radius: 5px;
+  fill: white; /* Color por defecto */
 }
 
 #citaNow:hover {
   background-color: var(--color-background-light);
+  fill: var(--color-background-light); /* Cambia a un color diferente al hacer hover */
 }
 
 .nav-link.active {
   color: var(--active-index) !important;
   font-weight: bold;
+}
+
+.nav-link:focus{
+  color: #292929 !important;
 }
 
 
@@ -555,7 +560,7 @@ body {
 
   .icono_3 {
     width: 460px !important;
-    height: 460px !important;
+    height: 260px !important;
   }
 }
 
@@ -882,6 +887,12 @@ body.modal-open {
   height: 60vh;
   width: 100%;
   text-align: justify;
+}
+
+.servicio-title{
+  color: var(--bs-body-color-text);
+  font-family:"monserrat-BlackItalic", Arial;
+  font-size: calc(1em + 2vw);
 }
 
 .servicios .icon-box-full img {

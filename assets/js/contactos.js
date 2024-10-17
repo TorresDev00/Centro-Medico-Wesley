@@ -8,23 +8,23 @@ $(document).ready(function () {
   let isDarkMode = false;
 
   function toggleTheme() {
-      const htmlElement = document.documentElement;
-      if (htmlElement.getAttribute('data-bs-theme') === 'light') {
-          htmlElement.setAttribute('data-bs-theme', 'dark');
-          selectImg.src = 'assets/img/iconoWesley.png';
-          htmlElement.classList.add('dark');
-          themeIcon.classList.remove('bi-sun-fill');
-          themeIcon.classList.add('bi-moon-fill');
-          themeText.textContent = 'Dark';
-      } else {
-          htmlElement.setAttribute('data-bs-theme', 'light');
-          htmlElement.classList.remove('dark');
-          selectImg.src = 'assets/img/iconoWesley_1.png';
-          themeIcon.classList.remove('bi-moon-fill');
-          themeIcon.classList.add('bi-sun-fill');
-          themeText.textContent = 'Light';
-      }
-      isDarkMode = !isDarkMode;
+    const htmlElement = document.documentElement;
+    if (htmlElement.getAttribute('data-bs-theme') === 'light') {
+      htmlElement.setAttribute('data-bs-theme', 'dark');
+      selectImg.src = 'assets/img/iconoWesley.png';
+      htmlElement.classList.add('dark');
+      themeIcon.classList.remove('bi-sun-fill');
+      themeIcon.classList.add('bi-moon-fill');
+      themeText.textContent = 'Dark';
+    } else {
+      htmlElement.setAttribute('data-bs-theme', 'light');
+      htmlElement.classList.remove('dark');
+      selectImg.src = 'assets/img/iconoWesley_1.png';
+      themeIcon.classList.remove('bi-moon-fill');
+      themeIcon.classList.add('bi-sun-fill');
+      themeText.textContent = 'Light';
+    }
+    isDarkMode = !isDarkMode;
   }
 
   themeToggle.addEventListener('click', toggleTheme);
@@ -103,85 +103,106 @@ $(document).ready(function () {
     }
   }
 
-  $('#email').keyup(() => { validarCorreo($('#email'), $('.error1'), 'correo invalido') });
-  $('#telefono').keyup(() => { validarTelefono($('#telefono'), $('.error2'), 'Telefono invalido') });
-  $('#name').keyup(() => { validarNombre($('#name'), $('.error3'), 'nombre invalido') });
+  let timeoutId
+  let time = 400
 
-  let name, telefono, correo;
+  $('#email').keyup(() => {
+    clearTimeout(timeoutId); 
+    timeoutId = setTimeout(() => {
+        validarCorreo($('#email'), $('.error1'), 'correo invalido'); 
+    }, time); 
+});
+    
 
-  $('#registrar').click(function (e) {
-    e.preventDefault();
+$('#telefono').keyup(() => { 
+  clearTimeout(timeoutId); 
+  timeoutId = setTimeout(() => {
+    validarTelefono($('#telefono'), $('.error2'), 'Telefono invalido')  
+  }, time);
+});
 
-    let email = validarCorreo($('#email'), $('.error1'), 'correo invalido');
-    let cell = validarTelefono($('#telefono'), $('.error2'), 'Telefono invalido');
-    let nombre = validarNombre($('#name'), $('.error3'), 'nombre invalido');
+$('#name').keyup(() => { 
+  clearTimeout(timeoutId); 
+  timeoutId = setTimeout(() => {
+    validarNombre($('#name'), $('.error3'), 'nombre invalido') 
+  }, time);
+});
 
-    if (email && cell && nombre) {
+let name, telefono, correo;
 
-      let successAlertShown = false;
+$('#registrar').click(function (e) {
+  e.preventDefault();
 
-      Swal.fire({
-        title: 'Enviando correo...',
-        html: 'Espere un momento por favor',
-        timer: false, // Eliminar el temporizador
-        timerProgressBar: false, // Eliminar la barra de progreso
-        allowOutsideClick: false, // Bloquear el cierre de la alerta
-        allowEscapeKey: false, // Bloquear el cierre de la alerta con la tecla Esc
-        showConfirmButton: false, // Ocultar el botón de confirmación
-        didOpen: () => {
-          Swal.showLoading();
-        }
+  let email = validarCorreo($('#email'), $('.error1'), 'correo invalido');
+  let cell = validarTelefono($('#telefono'), $('.error2'), 'Telefono invalido');
+  let nombre = validarNombre($('#name'), $('.error3'), 'nombre invalido');
 
-      })
+  if (email && cell && nombre) {
 
-      name = $('#name').val();
-      telefono = $('#telefono').val();
-      correo = $('#email').val();
+    let successAlertShown = false;
 
-      $.ajax({
-        method: 'POST',
-        url: window.location.origin + '/Centro Medico Wesley/forms/contact.php',
-        dataType: 'json',
-        data: { name, telefono, correo },
-        success(data) {
-          if (data === 'Registrado con exito' && !successAlertShown) {
-            $('.form')[0].reset()
-            successAlertShown = true;
-            Swal.fire({
-              title: "Enviado con Éxito",
-              text: "Presiona click en el botón!",
-              icon: "success",
-              showConfirmButton: true,
-              confirmButtonText: "OK",
-              customClass: {
-                  confirmButton: "btn btn-color"
-              }
+    Swal.fire({
+      title: 'Enviando correo...',
+      html: 'Espere un momento por favor',
+      timer: false, // Eliminar el temporizador
+      timerProgressBar: false, // Eliminar la barra de progreso
+      allowOutsideClick: false, // Bloquear el cierre de la alerta
+      allowEscapeKey: false, // Bloquear el cierre de la alerta con la tecla Esc
+      showConfirmButton: false, // Ocultar el botón de confirmación
+      didOpen: () => {
+        Swal.showLoading();
+      }
+
+    })
+
+    name = $('#name').val();
+    telefono = $('#telefono').val();
+    correo = $('#email').val();
+
+    $.ajax({
+      method: 'POST',
+      url: window.location.origin + '/Centro Medico Wesley/forms/contact.php',
+      dataType: 'json',
+      data: { name, telefono, correo },
+      success(data) {
+        if (data === 'Registrado con exito' && !successAlertShown) {
+          $('.form')[0].reset()
+          successAlertShown = true;
+          Swal.fire({
+            title: "Enviado con Éxito",
+            text: "Presiona click en el botón!",
+            icon: "success",
+            showConfirmButton: true,
+            confirmButtonText: "OK",
+            customClass: {
+              confirmButton: "btn btn-color"
+            }
           });
-          }else{
-            Swal.fire({
-              title: "Error al enviar el correo",
-              text: "Ocurrió un error al enviar el correo. Por favor, inténtalo de nuevo más tarde.",
-              icon: "error",
-              showConfirmButton: true,
-              confirmButtonText: "OK",
-              customClass: {
-                  confirmButton: "btn btn-color"
-              }
+        } else {
+          Swal.fire({
+            title: "Error al enviar el correo",
+            text: "Ocurrió un error al enviar el correo. Por favor, inténtalo de nuevo más tarde.",
+            icon: "error",
+            showConfirmButton: true,
+            confirmButtonText: "OK",
+            customClass: {
+              confirmButton: "btn btn-color"
+            }
           });
-          }
-        }, complete: function(){
-          if(!successAlertShown){
-            Swal.close();
-          }
         }
-      })
+      }, complete: function () {
+        if (!successAlertShown) {
+          Swal.close();
+        }
+      }
+    })
 
-    } else {
+  } else {
 
-    }
+  }
 
 
-  })
+})
 
 
 })
