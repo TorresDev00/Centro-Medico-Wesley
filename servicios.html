@@ -20,10 +20,9 @@
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg" id="navbar">
         <div class="container my-1">
-            <a class="navbar-brand" href="#"><img src="assets/img/iconoWesley_1.png" alt="Logo Centro mMedico"
-                    class="img-fluid" width="50" height="50"> </a>
+            <a class="navbar-brand" href="#"> <img src="assets/img/iconoWesley_1.webp" alt="Logo Centro Médico" class="img-fluid" width="50" height="50"> </a>
             <button class="navbar-toggler d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Abrir menú móvil">
                 <span class="bi bi-three-dots"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
@@ -57,30 +56,27 @@
                     <hr class="d-lg-none text-white-50">
                     <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
                         <li class="nav-item col-6 col-lg-auto py-3 px-1">
-                            <a class="nav-link py-2 px-0 px-lg-2"
-                                href="https://www.instagram.com/centromedicowesley?igsh=MXQyNWpuZXM3cmpodA== "
-                                target="_blank" rel="noopener">
+                            <a class="nav-link py-2 px-0 px-lg-2" href="https://www.instagram.com/centromedicowesley?igsh=MXQyNWpuZXM3cmpodA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                 <i class="bi bi-instagram"></i>
                                 <small class="d-lg-none ms-2">Instagram</small>
                             </a>
                         </li>
                         <li class="nav-item col-6 col-lg-auto py-3 px-1">
-                            <a class="nav-link py-2 px-0 px-lg-2"
-                                href="https://www.facebook.com/people/Fundaci%C3%B3n-Centro-Medico-Wesley/100057078264752/?mibextid=ZbWKwL"
-                                target="_blank" rel="noopener">
+                            <a class="nav-link py-2 px-0 px-lg-2" href="https://www.facebook.com/people/Fundaci%C3%B3n-Centro-Medico-Wesley/100057078264752/?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                                 <i class="bi bi-facebook"></i>
                                 <small class="d-lg-none ms-2">Facebook</small>
                             </a>
                         </li>
                         <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
-                            <div class="vr d-none d-lg-flex h-75 mx-lg-2"></div>
+                            <div class="vr d-none d-lg-flex h-75 mx-lg-2 text-white"></div>
                             <hr class="d-lg-none my-2 text-white-25">
                         </li>
-                        <button id="theme-toggle"
-                            class="btn btn-link nav-link py-2 px-0 px-lg-2 d-flex align-items-center">
-                            <i id="theme-icon" class="bi bi-sun-fill my-1"></i>
-                            <span class="d-lg-none ms-2" id="theme-text">Light</span>
-                        </button>
+                        <li class="nav-item">
+                            <button id="theme-toggle" class="btn btn-link nav-link py-4 px-0 px-lg-2 d-flex align-items-center" aria-label="Cambiar tema">
+                                <i id="theme-icon" class="bi bi-sun-fill"></i>
+                                <span class="d-lg-none ms-2" id="theme-text">Light</span>
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
