@@ -111,6 +111,7 @@ Nosotros
 
 .vision p,
 .mision p {
+  font-family: 'Roboto', sans-serif;
   text-align: center;
   margin: 20px 0;
   font-size: 4vw;
@@ -374,7 +375,7 @@ Principios - Telefono
 
 @media (min-width: 900px) {
   .nosotros {
-    height: 100vw;
+    height: 80vw;
   }
 
 }
@@ -412,7 +413,7 @@ Principios - Telefono
 
 @media (min-width: 2560px) {
   .nosotros {
-    height: 75vh;
+    height: 100vh;
   }
 
   .vision p,
